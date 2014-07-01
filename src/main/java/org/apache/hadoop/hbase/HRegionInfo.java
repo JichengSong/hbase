@@ -348,19 +348,19 @@ implements WritableComparable<HRegionInfo> {
     byte [] b = new byte [tableName.length + 2 + id.length +
        (startKey == null? 0: startKey.length) +
        (newFormat ? (MD5_HEX_LENGTH + 2) : 0)];
-
+    //1.将表名 copy 到b[]
     int offset = tableName.length;
     System.arraycopy(tableName, 0, b, 0, offset);
-    b[offset++] = DELIMITER;
-    if (startKey != null && startKey.length > 0) {
+    b[offset++] = DELIMITER;//2.copy 分隔符
+    if (startKey != null && startKey.length > 0) {//3.copy startKey
       System.arraycopy(startKey, 0, b, offset, startKey.length);
       offset += startKey.length;
     }
-    b[offset++] = DELIMITER;
-    System.arraycopy(id, 0, b, offset, id.length);
+    b[offset++] = DELIMITER;//4.copy 分隔符
+    System.arraycopy(id, 0, b, offset, id.length);//5.copy id,通常是timestamp
     offset += id.length;
 
-    if (newFormat) {
+    if (newFormat) {//6. 如果采用newFormat,copy MD5值
       //
       // Encoded name should be built into the region name.
       //

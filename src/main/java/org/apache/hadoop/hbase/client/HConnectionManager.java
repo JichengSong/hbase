@@ -957,7 +957,7 @@ public class HConnectionManager {
     throws IOException{
       return locateRegion(tableName, row, true, true);
     }
-
+    /**重新查找相应的region*/
     public HRegionLocation relocateRegion(final byte [] tableName,
         final byte [] row)
     throws IOException{
@@ -968,10 +968,10 @@ public class HConnectionManager {
       if (isTableDisabled(tableName)) {
         throw new DoNotRetryIOException(Bytes.toString(tableName) + " is disabled.");
       }
-
+      
       return locateRegion(tableName, row, false, true);
     }
-
+    /**根据tableName和rowKey 获取应该响应该rowkey(插入/删除等)操作的region**/
     private HRegionLocation locateRegion(final byte [] tableName,
       final byte [] row, boolean useCache, boolean retry)
     throws IOException {
@@ -981,7 +981,7 @@ public class HConnectionManager {
             "table name cannot be null or zero length");
       }
       ensureZookeeperTrackers();
-      if (Bytes.equals(tableName, HConstants.ROOT_TABLE_NAME)) {
+      if (Bytes.equals(tableName, HConstants.ROOT_TABLE_NAME)) {	//1.如果tableName是-ROOT-表,获取-ROOT-所在region
         try {
           ServerName servername = this.rootRegionTracker.waitRootRegionLocation(this.rpcTimeout);
           LOG.debug("Looked up root region location, connection=" + this +
@@ -993,10 +993,10 @@ public class HConnectionManager {
           Thread.currentThread().interrupt();
           return null;
         }
-      } else if (Bytes.equals(tableName, HConstants.META_TABLE_NAME)) {
+      } else if (Bytes.equals(tableName, HConstants.META_TABLE_NAME)) {//2.如果tableName是.MATA.表
         return locateRegionInMeta(HConstants.ROOT_TABLE_NAME, tableName, row,
             useCache, metaRegionLock, retry);
-      } else {
+      } else {//3.tableName是用户表,从meta表里查找RegionServer
         // Region not in the cache - have to go to the meta RS
         return locateRegionInMeta(HConstants.META_TABLE_NAME, tableName, row,
             useCache, userRegionLock, retry);
@@ -1063,7 +1063,7 @@ public class HConnectionManager {
       }
     }
 
-    /*
+    /*  
       * Search one of the meta tables (-ROOT- or .META.) for the HRegionLocation
       * info that contains the table and row we're seeking.
       */
@@ -1074,20 +1074,20 @@ public class HConnectionManager {
       HRegionLocation location;
       // If we are supposed to be using the cache, look in the cache to see if
       // we already have the region.
-      if (useCache) {
+      if (useCache) {//1.该region是否已经被cache
         location = getCachedLocation(tableName, row);
         if (location != null) {
           return location;
         }
       }
-
+      //2.生成一个临时regionName作为metaKey
       int localNumRetries = retry ? numRetries : 1;
       // build the key of the meta region we should be looking for.
       // the extra 9's on the end are necessary to allow "exact" matches
       // without knowing the precise region names.
       byte [] metaKey = HRegionInfo.createRegionName(tableName, row,
         HConstants.NINES, false);
-      for (int tries = 0; true; tries++) {
+      for (int tries = 0; true; tries++) {//3.根据metaKey找到相应的region
         if (tries >= localNumRetries) {
           throw new NoServerForRegionException("Unable to find region for "
             + Bytes.toStringBinary(row) + " after " + numRetries + " tries.");
@@ -1095,7 +1095,7 @@ public class HConnectionManager {
 
         HRegionLocation metaLocation = null;
         try {
-          // locate the root or meta region
+          // locate the root or meta region;这里的parentTable可能是-ROOT-表或.META.表
           metaLocation = locateRegion(parentTable, metaKey, true, false);
           // If null still, go around again.
           if (metaLocation == null) continue;
