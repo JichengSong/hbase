@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/asf/!svn/ver/1537607/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/metrics
+END
+TestMasterStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1537607/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/metrics/TestMasterStatistics.java
+END

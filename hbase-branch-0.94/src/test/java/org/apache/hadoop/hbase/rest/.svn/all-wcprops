@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1564936/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest
+END
+TestSchemaResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1541642/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestSchemaResource.java
+END
+PerformanceEvaluation.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1422310/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/PerformanceEvaluation.java
+END
+TestGZIPResponseWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1537199/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestGZIPResponseWrapper.java
+END
+TestMultiRowResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1427845/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestMultiRowResource.java
+END
+TestStatusResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1427845/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestStatusResource.java
+END
+TestVersionResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1427845/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestVersionResource.java
+END
+TestGzipFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1520715/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestGzipFilter.java
+END
+TestRowResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1497211/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestRowResource.java
+END
+TestTableResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1427845/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestTableResource.java
+END
+TestScannerResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1427845/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestScannerResource.java
+END
+TestScannersWithFilters.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1427845/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestScannersWithFilters.java
+END
+HBaseRESTTestingUtility.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1564936/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/HBaseRESTTestingUtility.java
+END
+TestRESTMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1537213/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/TestRESTMetrics.java
+END

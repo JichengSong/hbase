@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/asf/!svn/ver/1591495/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce
+END
+TestSimpleTotalOrderPartitioner.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestSimpleTotalOrderPartitioner.java
+END
+TestHLogRecordReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1330071/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestHLogRecordReader.java
+END
+TestImportExport.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1566484/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestImportExport.java
+END
+TestTableMapReduce.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1542642/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestTableMapReduce.java
+END
+TestTableInputFormatScanBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1471221/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestTableInputFormatScanBase.java
+END
+TestHFileOutputFormat.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1586701/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestHFileOutputFormat.java
+END
+TestCopyTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1487228/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestCopyTable.java
+END
+NMapInputFormat.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/NMapInputFormat.java
+END
+MapreduceTestingShim.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1509873/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/MapreduceTestingShim.java
+END
+TestLoadIncrementalHFilesSplitRecovery.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1577659/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFilesSplitRecovery.java
+END
+TestMultiTableInputFormat.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1441709/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestMultiTableInputFormat.java
+END
+TestLoadIncrementalHFiles.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1591495/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestLoadIncrementalHFiles.java
+END
+TsvImporterCustomTestMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TsvImporterCustomTestMapper.java
+END
+TestWALPlayer.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1326001/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestWALPlayer.java
+END
+TestTableSnapshotInputFormat.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1577420/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormat.java
+END
+TestTableSplit.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestTableSplit.java
+END
+TestTimeRangeMapRed.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestTimeRangeMapRed.java
+END
+TestTableSnapshotInputFormatScan.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1588012/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestTableSnapshotInputFormatScan.java
+END
+TestTableInputFormatScan1.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1468207/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestTableInputFormatScan1.java
+END
+TestTableInputFormatScan2.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1468207/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestTableInputFormatScan2.java
+END
+TestImportTsv.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1477450/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestImportTsv.java
+END
+TestMultithreadedTableMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1308354/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/TestMultithreadedTableMapper.java
+END

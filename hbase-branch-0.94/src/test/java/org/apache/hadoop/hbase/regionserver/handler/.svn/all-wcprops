@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1465063/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/regionserver/handler
+END
+TestOpenRegionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1465063/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/regionserver/handler/TestOpenRegionHandler.java
+END
+TestCloseRegionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1445350/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/regionserver/handler/TestCloseRegionHandler.java
+END

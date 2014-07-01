@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/asf/!svn/ver/1553452/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/ipc
+END
+SecureServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1536930/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/ipc/SecureServer.java
+END
+SecureConnectionHeader.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1536930/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/ipc/SecureConnectionHeader.java
+END
+SecureRpcEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1536930/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/ipc/SecureRpcEngine.java
+END
+SecureClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1553452/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/ipc/SecureClient.java
+END

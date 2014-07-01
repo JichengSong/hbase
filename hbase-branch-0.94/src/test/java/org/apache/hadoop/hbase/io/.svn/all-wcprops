@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1594139/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/io
+END
+TestFileLink.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/io/TestFileLink.java
+END
+TestImmutableBytesWritable.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/io/TestImmutableBytesWritable.java
+END
+TestHbaseObjectWritable.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1438114/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/io/TestHbaseObjectWritable.java
+END
+TestHeapSize.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1542104/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/io/TestHeapSize.java
+END
+TestHalfStoreFileReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1383792/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/io/TestHalfStoreFileReader.java
+END

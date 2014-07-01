@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/constraint
+END
+ConstraintException.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/constraint/ConstraintException.java
+END
+Constraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/constraint/Constraint.java
+END
+ConstraintProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/constraint/ConstraintProcessor.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/constraint/package-info.java
+END
+Constraints.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/constraint/Constraints.java
+END
+BaseConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/constraint/BaseConstraint.java
+END

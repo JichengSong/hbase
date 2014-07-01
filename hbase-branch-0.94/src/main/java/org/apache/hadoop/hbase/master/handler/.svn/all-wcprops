@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/asf/!svn/ver/1571918/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler
+END
+TotesHRegionInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/TotesHRegionInfo.java
+END
+TableEventHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1464928/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/TableEventHandler.java
+END
+EnableTableHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1553311/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/EnableTableHandler.java
+END
+SplitRegionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/SplitRegionHandler.java
+END
+ModifyTableHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1310017/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/ModifyTableHandler.java
+END
+TableModifyFamilyHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1310017/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/TableModifyFamilyHandler.java
+END
+TableAddFamilyHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1455730/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/TableAddFamilyHandler.java
+END
+ServerShutdownHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1571918/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/ServerShutdownHandler.java
+END
+MetaServerShutdownHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1466725/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/MetaServerShutdownHandler.java
+END
+DeleteTableHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1465747/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/DeleteTableHandler.java
+END
+DisableTableHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/DisableTableHandler.java
+END
+CreateTableHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1515967/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/CreateTableHandler.java
+END
+TableDeleteFamilyHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1455730/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/TableDeleteFamilyHandler.java
+END
+ClosedRegionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/ClosedRegionHandler.java
+END
+OpenedRegionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/handler/OpenedRegionHandler.java
+END

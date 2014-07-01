@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1507102/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated
+END
+TPut.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1507074/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TPut.java
+END
+TDurability.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1507102/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TDurability.java
+END
+TRowMutations.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1504255/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TRowMutations.java
+END
+TTimeRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TTimeRange.java
+END
+TIllegalArgument.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TIllegalArgument.java
+END
+TResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1498900/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TResult.java
+END
+TGet.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1502433/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TGet.java
+END
+TIOError.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TIOError.java
+END
+TScan.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1502433/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TScan.java
+END
+TIncrement.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1498900/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TIncrement.java
+END
+TColumnValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TColumnValue.java
+END
+TColumn.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TColumn.java
+END
+TMutation.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1504255/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TMutation.java
+END
+TDelete.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1507074/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TDelete.java
+END
+TColumnIncrement.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TColumnIncrement.java
+END
+THBaseService.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1505292/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/THBaseService.java
+END
+TDeleteType.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/generated/TDeleteType.java
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1462518/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/replication/regionserver
+END
+TestReplicationSink.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSink.java
+END
+TestReplicationSourceManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1462518/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/replication/regionserver/TestReplicationSourceManager.java
+END

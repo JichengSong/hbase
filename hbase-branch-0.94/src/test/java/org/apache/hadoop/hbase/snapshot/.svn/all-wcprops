@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1593778/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot
+END
+SnapshotTestingUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1574599/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/SnapshotTestingUtils.java
+END
+TestReferenceRegionHFilesTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestReferenceRegionHFilesTask.java
+END
+TestExportSnapshot.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1593778/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestExportSnapshot.java
+END
+TestSnapshotTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestSnapshotTask.java
+END
+TestRestoreSnapshotHelper.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1464928/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestRestoreSnapshotHelper.java
+END
+TestFlushSnapshotFromClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1508811/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestFlushSnapshotFromClient.java
+END
+TestSnapshotDescriptionUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1468671/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestSnapshotDescriptionUtils.java
+END
+TestCopyRecoveredEditsTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestCopyRecoveredEditsTask.java
+END
+TestWALReferenceTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestWALReferenceTask.java
+END
+TestRestoreFlushSnapshotFromClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1546443/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestRestoreFlushSnapshotFromClient.java
+END
+TestSnapshotLogSplitter.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/snapshot/TestSnapshotLogSplitter.java
+END

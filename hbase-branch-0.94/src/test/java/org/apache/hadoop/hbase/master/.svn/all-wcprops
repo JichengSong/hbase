@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1588609/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master
+END
+TestMXBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1411998/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMXBean.java
+END
+TestRollingRestart.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestRollingRestart.java
+END
+TestDefaultLoadBalancer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestDefaultLoadBalancer.java
+END
+TestOpenedRegionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1464785/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestOpenedRegionHandler.java
+END
+TestDistributedLogSplitting.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1587458/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestDistributedLogSplitting.java
+END
+TestActiveMasterManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1569123/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestActiveMasterManager.java
+END
+TestMasterFailover.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1466725/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMasterFailover.java
+END
+TestMasterZKSessionRecovery.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1482671/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMasterZKSessionRecovery.java
+END
+TestDeadServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestDeadServer.java
+END
+TestClockSkewDetection.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1541115/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestClockSkewDetection.java
+END
+TestRestartCluster.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1507768/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestRestartCluster.java
+END
+TestMasterShutdown.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1483045/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMasterShutdown.java
+END
+TestHMasterRPCException.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1439723/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestHMasterRPCException.java
+END
+Mocking.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1445350/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/Mocking.java
+END
+TestSplitLogManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1554879/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestSplitLogManager.java
+END
+TestMasterTransitions.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1463072/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMasterTransitions.java
+END
+TestMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1459583/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMaster.java
+END
+TestZKBasedOpenCloseRegion.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1588609/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestZKBasedOpenCloseRegion.java
+END
+TestMasterFileSystem.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1425152/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMasterFileSystem.java
+END
+TestCatalogJanitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1483485/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestCatalogJanitor.java
+END
+TestAssignmentManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1554879/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestAssignmentManager.java
+END
+TestMasterStatusServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1536930/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMasterStatusServlet.java
+END
+TestMasterRestartAfterDisablingTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1301737/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/TestMasterRestartAfterDisablingTable.java
+END

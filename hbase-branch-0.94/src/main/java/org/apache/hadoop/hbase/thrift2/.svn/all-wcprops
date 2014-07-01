@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/asf/!svn/ver/1507102/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2
+END
+ThriftServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1501984/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/ThriftServer.java
+END
+ThriftUtilities.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1507074/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/ThriftUtilities.java
+END
+package.html
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1391284/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/package.html
+END
+ThriftHBaseServiceHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1505323/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift2/ThriftHBaseServiceHandler.java
+END

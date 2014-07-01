@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/asf/!svn/ver/1578453/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot
+END
+DisabledTableSnapshotHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1515967/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/DisabledTableSnapshotHandler.java
+END
+CloneSnapshotHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1515967/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/CloneSnapshotHandler.java
+END
+EnabledTableSnapshotHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1515967/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/EnabledTableSnapshotHandler.java
+END
+RestoreSnapshotHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1540912/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/RestoreSnapshotHandler.java
+END
+SnapshotHFileCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1506176/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/SnapshotHFileCleaner.java
+END
+TakeSnapshotHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1515967/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/TakeSnapshotHandler.java
+END
+SnapshotFileCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1578453/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/SnapshotFileCache.java
+END
+MasterSnapshotVerifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1515967/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/MasterSnapshotVerifier.java
+END
+SnapshotManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1549820/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/SnapshotManager.java
+END
+SnapshotLogCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1506176/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/snapshot/SnapshotLogCleaner.java
+END

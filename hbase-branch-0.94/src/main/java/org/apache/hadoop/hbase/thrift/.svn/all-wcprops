@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1536930/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift
+END
+CallQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/CallQueue.java
+END
+ThriftServerRunner.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1516055/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/ThriftServerRunner.java
+END
+IncrementCoalescer.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1344435/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/IncrementCoalescer.java
+END
+ThriftMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/ThriftMetrics.java
+END
+ThriftServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1536930/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/ThriftServer.java
+END
+IncrementCoalescerMBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1344435/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/IncrementCoalescerMBean.java
+END
+HbaseHandlerMetricsProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/HbaseHandlerMetricsProxy.java
+END
+ThriftUtilities.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1508231/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/ThriftUtilities.java
+END
+HThreadedSelectorServerArgs.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/HThreadedSelectorServerArgs.java
+END
+TBoundedThreadPoolServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/thrift/TBoundedThreadPoolServer.java
+END

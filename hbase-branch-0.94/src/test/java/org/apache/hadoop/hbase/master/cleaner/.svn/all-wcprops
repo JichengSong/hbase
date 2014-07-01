@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/asf/!svn/ver/1527021/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/cleaner
+END
+TestLogsCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1404762/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/cleaner/TestLogsCleaner.java
+END
+TestHFileLinkCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/cleaner/TestHFileLinkCleaner.java
+END
+TestSnapshotFromMaster.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1527021/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/cleaner/TestSnapshotFromMaster.java
+END
+TestHFileCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1506176/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/cleaner/TestHFileCleaner.java
+END
+TestCleanerChore.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1506176/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/cleaner/TestCleanerChore.java
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/repos/asf/!svn/ver/1519876/hbase/branches/0.94/conf
+END
+hbase-site.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/asf/!svn/ver/1519876/hbase/branches/0.94/conf/hbase-site.xml
+END
+hadoop-metrics.properties
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/asf/!svn/ver/1339832/hbase/branches/0.94/conf/hadoop-metrics.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/asf/!svn/ver/1423927/hbase/branches/0.94/conf/log4j.properties
+END
+regionservers
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/conf/regionservers
+END
+hbase-policy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/conf/hbase-policy.xml
+END
+hbase-env.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/asf/!svn/ver/1464745/hbase/branches/0.94/conf/hbase-env.sh
+END

@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1569122/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc
+END
+ConnectionHeader.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/ConnectionHeader.java
+END
+HBaseServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1569122/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HBaseServer.java
+END
+Invocation.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1383754/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/Invocation.java
+END
+RpcEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1439723/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/RpcEngine.java
+END
+RpcServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1336788/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/RpcServer.java
+END
+HRegionInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1534494/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HRegionInterface.java
+END
+HBaseRpcMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1569122/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRpcMetrics.java
+END
+VersionedProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/VersionedProtocol.java
+END
+HBaseClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1552888/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HBaseClient.java
+END
+Delayable.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/Delayable.java
+END
+Status.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/Status.java
+END
+ProtocolSignature.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/ProtocolSignature.java
+END
+CoprocessorProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/CoprocessorProtocol.java
+END
+HMasterInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1513738/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HMasterInterface.java
+END
+RpcCallContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1336797/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/RpcCallContext.java
+END
+ExecRPCInvoker.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/ExecRPCInvoker.java
+END
+HBaseRPC.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1439723/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRPC.java
+END
+ResponseFlag.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/ResponseFlag.java
+END
+HMasterRegionInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HMasterRegionInterface.java
+END
+ServerNotRunningYetException.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/ServerNotRunningYetException.java
+END
+RequestContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/RequestContext.java
+END
+HBaseRPCErrorHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRPCErrorHandler.java
+END
+HBaseRPCStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1298922/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/HBaseRPCStatistics.java
+END
+MasterExecRPCInvoker.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1409431/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/MasterExecRPCInvoker.java
+END
+WritableRpcEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1536930/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/WritableRpcEngine.java
+END
+CallerDisconnectedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1336797/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/ipc/CallerDisconnectedException.java
+END

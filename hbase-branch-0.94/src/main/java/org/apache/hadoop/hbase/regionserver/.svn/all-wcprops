@@ -1,0 +1,455 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/asf/!svn/ver/1595266/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver
+END
+LogRoller.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1564249/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/LogRoller.java
+END
+DebugPrint.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/DebugPrint.java
+END
+RegionOpeningState.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionOpeningState.java
+END
+OperationStatus.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/OperationStatus.java
+END
+KeyPrefixRegionSplitPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1442803/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/KeyPrefixRegionSplitPolicy.java
+END
+StoreFileScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1531792/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/StoreFileScanner.java
+END
+StoreScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1545840/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/StoreScanner.java
+END
+CompactionRequestor.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1451057/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/CompactionRequestor.java
+END
+ExplicitColumnTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1576456/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ExplicitColumnTracker.java
+END
+ReplicationSourceService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ReplicationSourceService.java
+END
+CompoundConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1535442/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/CompoundConfiguration.java
+END
+DeleteTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/DeleteTracker.java
+END
+RegionServerServices.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1489274/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionServerServices.java
+END
+RegionSplitPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1513304/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionSplitPolicy.java
+END
+RSDumpServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1565828/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RSDumpServlet.java
+END
+MemStoreFlusher.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1591495/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/MemStoreFlusher.java
+END
+SplitLogWorker.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1450018/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/SplitLogWorker.java
+END
+ScanWildcardColumnTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1521356/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ScanWildcardColumnTracker.java
+END
+CompactSplitThread.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1451057/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/CompactSplitThread.java
+END
+CompactionTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1491599/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/CompactionTool.java
+END
+RegionServerCoprocessorHost.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1424085/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionServerCoprocessorHost.java
+END
+HRegion.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1591495/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/HRegion.java
+END
+MXBeanImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/MXBeanImpl.java
+END
+StoreFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1591495/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/StoreFile.java
+END
+Store.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1591495/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/Store.java
+END
+KeyValueScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/KeyValueScanner.java
+END
+RegionAlreadyInTransitionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionAlreadyInTransitionException.java
+END
+DisabledRegionSplitPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1475946/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/DisabledRegionSplitPolicy.java
+END
+ColumnTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1521356/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ColumnTracker.java
+END
+MXBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1298038/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/MXBean.java
+END
+MemStoreLAB.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/MemStoreLAB.java
+END
+Leases.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/Leases.java
+END
+ReplicationSinkService.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ReplicationSinkService.java
+END
+WrongRegionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/WrongRegionException.java
+END
+InternalScan.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/InternalScan.java
+END
+HRegionServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1591495/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServer.java
+END
+StoreFlusher.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/StoreFlusher.java
+END
+RegionServerAccounting.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1332344/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionServerAccounting.java
+END
+ScanType.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1367770/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ScanType.java
+END
+MiniBatchOperationInProgress.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1450593/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/MiniBatchOperationInProgress.java
+END
+RSStatusServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1565828/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RSStatusServlet.java
+END
+NoSuchColumnFamilyException.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/NoSuchColumnFamilyException.java
+END
+LeaseListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/LeaseListener.java
+END
+HRegionThriftServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1297322/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionThriftServer.java
+END
+SplitRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1561749/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/SplitRequest.java
+END
+LruHashMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/LruHashMap.java
+END
+ChangedReadersObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ChangedReadersObserver.java
+END
+NonLazyKeyValueScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/NonLazyKeyValueScanner.java
+END
+FlushRequester.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1483022/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/FlushRequester.java
+END
+MultiVersionConsistencyControl.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/MultiVersionConsistencyControl.java
+END
+ScanDeleteTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1301240/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ScanDeleteTracker.java
+END
+IncreasingToUpperBoundRegionSplitPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1569504/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/IncreasingToUpperBoundRegionSplitPolicy.java
+END
+MemStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1587628/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/MemStore.java
+END
+RegionScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1420005/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionScanner.java
+END
+HRegionFileSystem.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1465747/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionFileSystem.java
+END
+SplitTransaction.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1465747/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/SplitTransaction.java
+END
+RegionCoprocessorHost.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1553170/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionCoprocessorHost.java
+END
+GetClosestRowBeforeTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/GetClosestRowBeforeTracker.java
+END
+ColumnCount.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ColumnCount.java
+END
+MetaLogRoller.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1461314/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/MetaLogRoller.java
+END
+LeaseException.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/LeaseException.java
+END
+OnlineRegions.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1310017/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/OnlineRegions.java
+END
+ScanQueryMatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1584514/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ScanQueryMatcher.java
+END
+KeyValueHeap.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1580146/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/KeyValueHeap.java
+END
+ConstantSizeRegionSplitPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1426658/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ConstantSizeRegionSplitPolicy.java
+END
+KeyValueSkipListSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1525572/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/KeyValueSkipListSet.java
+END
+InternalScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1377205/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/InternalScanner.java
+END
+Compactor.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1483992/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/Compactor.java
+END
+DelimitedKeyPrefixRegionSplitPolicy.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1442803/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/DelimitedKeyPrefixRegionSplitPolicy.java
+END
+TimeRangeTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1574161/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/TimeRangeTracker.java
+END
+RegionServerStoppedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionServerStoppedException.java
+END
+HRegionServerCommandLine.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/HRegionServerCommandLine.java
+END
+ReplicationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ReplicationService.java
+END
+RegionServerRunningException.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/RegionServerRunningException.java
+END
+ShutdownHook.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1577591/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/ShutdownHook.java
+END

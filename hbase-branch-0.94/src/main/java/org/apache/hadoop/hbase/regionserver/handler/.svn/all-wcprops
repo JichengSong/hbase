@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1554933/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/handler
+END
+CloseMetaHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/handler/CloseMetaHandler.java
+END
+OpenRegionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1554933/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/handler/OpenRegionHandler.java
+END
+OpenRootHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/handler/OpenRootHandler.java
+END
+OpenMetaHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/handler/OpenMetaHandler.java
+END
+CloseRegionHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1445350/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/handler/CloseRegionHandler.java
+END
+CloseRootHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/handler/CloseRootHandler.java
+END

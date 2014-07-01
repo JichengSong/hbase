@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/asf/!svn/ver/1587398/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/procedure
+END
+TestProcedureCoordinator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1509512/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/procedure/TestProcedureCoordinator.java
+END
+TestZKProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1587398/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/procedure/TestZKProcedure.java
+END
+TestProcedureMember.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1509512/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/procedure/TestProcedureMember.java
+END
+TestZKProcedureControllers.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1495945/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/procedure/TestZKProcedureControllers.java
+END
+TestProcedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1467157/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/procedure/TestProcedure.java
+END

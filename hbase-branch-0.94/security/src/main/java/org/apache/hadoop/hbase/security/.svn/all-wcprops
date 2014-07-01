@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1591494/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security
+END
+AccessDeniedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/AccessDeniedException.java
+END
+HBaseSaslRpcClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1494871/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/HBaseSaslRpcClient.java
+END
+HBasePolicyProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1431142/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/HBasePolicyProvider.java
+END
+HBaseSaslRpcServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/HBaseSaslRpcServer.java
+END

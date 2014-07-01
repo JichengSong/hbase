@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/repos/asf/!svn/ver/1565828/hbase/branches/0.94/src/main/jamon/org/apache/hadoop/hbase/tmpl/master
+END
+BackupMasterStatusTmpl.jamon
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1547706/hbase/branches/0.94/src/main/jamon/org/apache/hadoop/hbase/tmpl/master/BackupMasterStatusTmpl.jamon
+END
+AssignmentManagerStatusTmpl.jamon
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/jamon/org/apache/hadoop/hbase/tmpl/master/AssignmentManagerStatusTmpl.jamon
+END
+MasterStatusTmpl.jamon
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1565828/hbase/branches/0.94/src/main/jamon/org/apache/hadoop/hbase/tmpl/master/MasterStatusTmpl.jamon
+END

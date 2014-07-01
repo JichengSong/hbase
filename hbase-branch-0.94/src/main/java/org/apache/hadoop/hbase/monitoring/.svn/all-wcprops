@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1587745/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring
+END
+ThreadMonitoring.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/ThreadMonitoring.java
+END
+MonitoredRPCHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/MonitoredRPCHandler.java
+END
+MonitoredTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/MonitoredTask.java
+END
+MonitoredRPCHandlerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/MonitoredRPCHandlerImpl.java
+END
+MonitoredTaskImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/MonitoredTaskImpl.java
+END
+LogMonitoring.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/LogMonitoring.java
+END
+MemoryBoundedLogMessageBuffer.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/MemoryBoundedLogMessageBuffer.java
+END
+TaskMonitor.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1587745/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/TaskMonitor.java
+END
+StateDumpServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/monitoring/StateDumpServlet.java
+END

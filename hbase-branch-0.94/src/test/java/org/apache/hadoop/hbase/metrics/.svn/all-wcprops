@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/asf/!svn/ver/1537437/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/metrics
+END
+TestExponentiallyDecayingSample.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1411998/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/metrics/TestExponentiallyDecayingSample.java
+END
+TestMetricsHistogram.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1537437/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/metrics/TestMetricsHistogram.java
+END
+TestMetricsMBeanBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1377107/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/metrics/TestMetricsMBeanBase.java
+END
+TestExactCounterMetric.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1411998/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/metrics/TestExactCounterMetric.java
+END

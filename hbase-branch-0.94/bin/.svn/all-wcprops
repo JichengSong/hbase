@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/asf/!svn/ver/1587762/hbase/branches/0.94/bin
+END
+zookeepers.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/bin/zookeepers.sh
+END
+local-master-backup.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/asf/!svn/ver/1334020/hbase/branches/0.94/bin/local-master-backup.sh
+END
+rolling-restart.sh
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/repos/asf/!svn/ver/1576955/hbase/branches/0.94/bin/rolling-restart.sh
+END
+regionservers.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/asf/!svn/ver/1576955/hbase/branches/0.94/bin/regionservers.sh
+END
+graceful_stop.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/asf/!svn/ver/1471253/hbase/branches/0.94/bin/graceful_stop.sh
+END
+master-backup.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/asf/!svn/ver/1576955/hbase/branches/0.94/bin/master-backup.sh
+END
+hbase-jruby
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/bin/hbase-jruby
+END
+stop-hbase.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/repos/asf/!svn/ver/1385027/hbase/branches/0.94/bin/stop-hbase.sh
+END
+hbase-daemons.sh
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/bin/hbase-daemons.sh
+END
+hbase
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/repos/asf/!svn/ver/1542816/hbase/branches/0.94/bin/hbase
+END
+get-active-master.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/bin/get-active-master.rb
+END
+hirb.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/bin/hirb.rb
+END
+start-hbase.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/asf/!svn/ver/1550041/hbase/branches/0.94/bin/start-hbase.sh
+END
+region_status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/bin/region_status.rb
+END
+hbase-daemon.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/asf/!svn/ver/1464745/hbase/branches/0.94/bin/hbase-daemon.sh
+END
+region_mover.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/asf/!svn/ver/1587762/hbase/branches/0.94/bin/region_mover.rb
+END
+local-regionservers.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/asf/!svn/ver/1334020/hbase/branches/0.94/bin/local-regionservers.sh
+END
+hbase-config.sh
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/asf/!svn/ver/1464745/hbase/branches/0.94/bin/hbase-config.sh
+END

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/asf/!svn/ver/1379010/hbase/branches/0.94/src/examples/thrift
+END
+DemoClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/examples/thrift/DemoClient.java
+END
+DemoClient.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/examples/thrift/DemoClient.cpp
+END
+DemoClient.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/examples/thrift/DemoClient.rb
+END
+DemoClient.php
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/examples/thrift/DemoClient.php
+END
+DemoClient.py
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/examples/thrift/DemoClient.py
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/examples/thrift/README.txt
+END
+DemoClient.pl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/asf/!svn/ver/1379010/hbase/branches/0.94/src/examples/thrift/DemoClient.pl
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/examples/thrift/Makefile
+END

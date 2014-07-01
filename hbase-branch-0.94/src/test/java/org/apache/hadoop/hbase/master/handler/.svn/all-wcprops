@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/asf/!svn/ver/1514904/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/handler
+END
+TestTableDeleteFamilyHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1423774/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/handler/TestTableDeleteFamilyHandler.java
+END
+TestTableDescriptorModification.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1455730/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/handler/TestTableDescriptorModification.java
+END
+TestCreateTableHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1514904/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/handler/TestCreateTableHandler.java
+END

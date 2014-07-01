@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1378268/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token
+END
+AuthenticationKey.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token/AuthenticationKey.java
+END
+ZKSecretWatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token/ZKSecretWatcher.java
+END
+TokenProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1378268/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token/TokenProvider.java
+END
+TokenUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token/TokenUtil.java
+END
+AuthenticationProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token/AuthenticationProtocol.java
+END
+AuthenticationTokenSecretManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token/AuthenticationTokenSecretManager.java
+END
+AuthenticationTokenSelector.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token/AuthenticationTokenSelector.java
+END
+AuthenticationTokenIdentifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/token/AuthenticationTokenIdentifier.java
+END

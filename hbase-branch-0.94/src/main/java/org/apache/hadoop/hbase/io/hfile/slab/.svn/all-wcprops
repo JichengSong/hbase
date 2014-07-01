@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/asf/!svn/ver/1408621/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/slab
+END
+SlabCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1408621/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/slab/SlabCache.java
+END
+SlabItemActionWatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/slab/SlabItemActionWatcher.java
+END
+SingleSizeCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1408621/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/slab/SingleSizeCache.java
+END
+Slab.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/slab/Slab.java
+END

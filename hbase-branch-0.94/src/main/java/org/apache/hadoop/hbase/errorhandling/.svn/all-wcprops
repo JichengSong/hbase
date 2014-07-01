@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/errorhandling
+END
+ForeignExceptionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/errorhandling/ForeignExceptionListener.java
+END
+ForeignExceptionDispatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/errorhandling/ForeignExceptionDispatcher.java
+END
+ForeignExceptionSnare.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/errorhandling/ForeignExceptionSnare.java
+END
+TimeoutExceptionInjector.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/errorhandling/TimeoutExceptionInjector.java
+END
+TimeoutException.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/errorhandling/TimeoutException.java
+END
+ForeignException.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/errorhandling/ForeignException.java
+END

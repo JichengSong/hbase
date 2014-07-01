@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1591494/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/access
+END
+TestTablePermissions.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1588716/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/access/TestTablePermissions.java
+END
+SecureTestUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1433532/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/access/SecureTestUtil.java
+END
+TestAccessController.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1591494/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/access/TestAccessController.java
+END
+TestAccessControlFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/repos/asf/!svn/ver/1588716/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/access/TestAccessControlFilter.java
+END
+TestZKPermissionsWatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/access/TestZKPermissionsWatcher.java
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1591494/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access
+END
+TablePermission.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/TablePermission.java
+END
+AccessControlLists.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1466723/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/AccessControlLists.java
+END
+TableAuthManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1536930/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/TableAuthManager.java
+END
+AccessController.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1591494/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/AccessController.java
+END
+SecureBulkLoadEndpoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1561243/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/SecureBulkLoadEndpoint.java
+END
+SecureBulkLoadProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1561243/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/SecureBulkLoadProtocol.java
+END
+AccessControllerProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/repos/asf/!svn/ver/1339922/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/AccessControllerProtocol.java
+END
+UserPermission.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1339922/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/UserPermission.java
+END
+AccessControlFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/AccessControlFilter.java
+END
+Permission.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/Permission.java
+END
+ZKPermissionWatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1339922/hbase/branches/0.94/security/src/main/java/org/apache/hadoop/hbase/security/access/ZKPermissionWatcher.java
+END

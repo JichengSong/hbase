@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/asf/!svn/ver/1561243/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor
+END
+MasterCoprocessorEnvironment.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/MasterCoprocessorEnvironment.java
+END
+SecureBulkLoadClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1561243/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/SecureBulkLoadClient.java
+END
+MasterObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1496240/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/MasterObserver.java
+END
+MultiRowMutationEndpoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/MultiRowMutationEndpoint.java
+END
+AggregateProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/AggregateProtocol.java
+END
+CoprocessorException.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/CoprocessorException.java
+END
+ColumnInterpreter.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/ColumnInterpreter.java
+END
+RegionServerCoprocessorEnvironment.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1424085/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/RegionServerCoprocessorEnvironment.java
+END
+RegionServerObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1424085/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/RegionServerObserver.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/package-info.java
+END
+MultiRowMutationProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/MultiRowMutationProtocol.java
+END
+BaseRegionObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1553170/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/BaseRegionObserver.java
+END
+RegionCoprocessorEnvironment.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1369515/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/RegionCoprocessorEnvironment.java
+END
+WALCoprocessorEnvironment.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/WALCoprocessorEnvironment.java
+END
+RegionObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1553170/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/RegionObserver.java
+END
+WALObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/WALObserver.java
+END
+ObserverContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/ObserverContext.java
+END
+AggregateImplementation.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1328027/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/AggregateImplementation.java
+END
+BaseEndpointCoprocessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/BaseEndpointCoprocessor.java
+END
+BaseMasterObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1496240/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/BaseMasterObserver.java
+END
+CoprocessorHost.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1550030/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/CoprocessorHost.java
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/asf/!svn/ver/1587696/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper
+END
+TestZooKeeperNodeTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestZooKeeperNodeTracker.java
+END
+TestZooKeeperMainServerArg.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1452552/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestZooKeeperMainServerArg.java
+END
+TestZKTableReadOnly.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1423616/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestZKTableReadOnly.java
+END
+TestHQuorumPeer.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestHQuorumPeer.java
+END
+TestZKLeaderManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1587696/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestZKLeaderManager.java
+END
+TestZKTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1423616/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestZKTable.java
+END
+TestRecoverableZooKeeper.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1480887/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestRecoverableZooKeeper.java
+END
+TestZKMulti.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1423635/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestZKMulti.java
+END
+TestZooKeeperACL.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1442843/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/zookeeper/TestZooKeeperACL.java
+END

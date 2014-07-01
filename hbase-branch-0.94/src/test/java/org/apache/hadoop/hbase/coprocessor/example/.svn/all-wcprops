@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1410200/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/example
+END
+TestZooKeeperScanPolicyObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1410200/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/example/TestZooKeeperScanPolicyObserver.java
+END
+TestBulkDeleteProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1401332/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/example/TestBulkDeleteProtocol.java
+END

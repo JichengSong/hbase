@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/asf/!svn/ver/1578453/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/snapshot
+END
+TestSnapshotHFileCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1506176/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/snapshot/TestSnapshotHFileCleaner.java
+END
+TestSnapshotFileCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1578453/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/snapshot/TestSnapshotFileCache.java
+END
+TestSnapshotManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1480586/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/snapshot/TestSnapshotManager.java
+END
+TestSnapshotLogCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1506176/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/master/snapshot/TestSnapshotLogCleaner.java
+END

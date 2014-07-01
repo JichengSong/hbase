@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/asf/!svn/ver/1567472/hbase/branches/0.94/dev-support
+END
+test-util.sh
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/asf/!svn/ver/1329903/hbase/branches/0.94/dev-support/test-util.sh
+END
+hbase_jdiff_acrossSingularityTemplate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/asf/!svn/ver/1524599/hbase/branches/0.94/dev-support/hbase_jdiff_acrossSingularityTemplate.xml
+END
+findHangingTest.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/dev-support/findHangingTest.sh
+END
+test-patch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/asf/!svn/ver/1299975/hbase/branches/0.94/dev-support/test-patch.sh
+END
+jdiffHBasePublicAPI.sh
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/asf/!svn/ver/1567472/hbase/branches/0.94/dev-support/jdiffHBasePublicAPI.sh
+END
+test-patch.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/asf/!svn/ver/1303197/hbase/branches/0.94/dev-support/test-patch.properties
+END
+hbase_jdiff_afterSingularityTemplate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/asf/!svn/ver/1524599/hbase/branches/0.94/dev-support/hbase_jdiff_afterSingularityTemplate.xml
+END
+hbase_jdiff_template.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1524599/hbase/branches/0.94/dev-support/hbase_jdiff_template.xml
+END
+hbasetests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/dev-support/hbasetests.sh
+END
+jdiffHBasePublicAPI_common.sh
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1524599/hbase/branches/0.94/dev-support/jdiffHBasePublicAPI_common.sh
+END
+smart-apply-patch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/asf/!svn/ver/1456129/hbase/branches/0.94/dev-support/smart-apply-patch.sh
+END

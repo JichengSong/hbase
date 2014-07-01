@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1536502/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/hadoopbackport
+END
+TestTotalOrderPartitioner.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1536502/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/hadoopbackport/TestTotalOrderPartitioner.java
+END
+TestInputSamplerTool.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1536502/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/hadoopbackport/TestInputSamplerTool.java
+END
+TestInputSampler.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1536502/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/hadoopbackport/TestInputSampler.java
+END
+TestJarFinder.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1465743/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/mapreduce/hadoopbackport/TestJarFinder.java
+END

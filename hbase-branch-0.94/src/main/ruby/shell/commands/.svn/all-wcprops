@@ -1,0 +1,341 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/asf/!svn/ver/1513339/hbase/branches/0.94/src/main/ruby/shell/commands
+END
+disable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/disable.rb
+END
+alter_async.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/alter_async.rb
+END
+balance_switch.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/balance_switch.rb
+END
+balancer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/balancer.rb
+END
+put.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/put.rb
+END
+list_peers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1308676/hbase/branches/0.94/src/main/ruby/shell/commands/list_peers.rb
+END
+grant.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/asf/!svn/ver/1466723/hbase/branches/0.94/src/main/ruby/shell/commands/grant.rb
+END
+list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/list.rb
+END
+major_compact.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/asf/!svn/ver/1408435/hbase/branches/0.94/src/main/ruby/shell/commands/major_compact.rb
+END
+disable_peer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1308676/hbase/branches/0.94/src/main/ruby/shell/commands/disable_peer.rb
+END
+stop_replication.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/stop_replication.rb
+END
+get.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/asf/!svn/ver/1405697/hbase/branches/0.94/src/main/ruby/shell/commands/get.rb
+END
+exists.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/exists.rb
+END
+hlog_roll.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/hlog_roll.rb
+END
+delete_snapshot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/ruby/shell/commands/delete_snapshot.rb
+END
+is_enabled.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/is_enabled.rb
+END
+truncate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/truncate.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/version.rb
+END
+unassign.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/unassign.rb
+END
+count.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/count.rb
+END
+incr.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/incr.rb
+END
+revoke.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1466723/hbase/branches/0.94/src/main/ruby/shell/commands/revoke.rb
+END
+drop_all.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/drop_all.rb
+END
+snapshot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/ruby/shell/commands/snapshot.rb
+END
+list_replicated_tables.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1513339/hbase/branches/0.94/src/main/ruby/shell/commands/list_replicated_tables.rb
+END
+enable_peer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/asf/!svn/ver/1308676/hbase/branches/0.94/src/main/ruby/shell/commands/enable_peer.rb
+END
+is_disabled.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/is_disabled.rb
+END
+create.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/create.rb
+END
+add_peer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/add_peer.rb
+END
+drop.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1375206/hbase/branches/0.94/src/main/ruby/shell/commands/drop.rb
+END
+move.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/move.rb
+END
+alter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/asf/!svn/ver/1462622/hbase/branches/0.94/src/main/ruby/shell/commands/alter.rb
+END
+show_filters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/show_filters.rb
+END
+close_region.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/close_region.rb
+END
+remove_peer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/remove_peer.rb
+END
+zk_dump.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/zk_dump.rb
+END
+alter_status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/alter_status.rb
+END
+list_snapshots.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/ruby/shell/commands/list_snapshots.rb
+END
+enable_all.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/enable_all.rb
+END
+get_counter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/get_counter.rb
+END
+clone_snapshot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/ruby/shell/commands/clone_snapshot.rb
+END
+describe.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/describe.rb
+END
+flush.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/flush.rb
+END
+status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/status.rb
+END
+whoami.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1339922/hbase/branches/0.94/src/main/ruby/shell/commands/whoami.rb
+END
+assign.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/assign.rb
+END
+scan.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1336788/hbase/branches/0.94/src/main/ruby/shell/commands/scan.rb
+END
+user_permission.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/asf/!svn/ver/1339922/hbase/branches/0.94/src/main/ruby/shell/commands/user_permission.rb
+END
+start_replication.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/start_replication.rb
+END
+compact.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/asf/!svn/ver/1408435/hbase/branches/0.94/src/main/ruby/shell/commands/compact.rb
+END
+enable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/enable.rb
+END
+split.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/split.rb
+END
+deleteall.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/deleteall.rb
+END
+disable_all.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/disable_all.rb
+END
+restore_snapshot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/ruby/shell/commands/restore_snapshot.rb
+END
+delete.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/shell/commands/delete.rb
+END

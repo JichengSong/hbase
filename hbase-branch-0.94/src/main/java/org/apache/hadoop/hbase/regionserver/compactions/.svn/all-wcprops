@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1561810/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/compactions
+END
+CompactSelection.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1561810/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/compactions/CompactSelection.java
+END
+CompactionProgress.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1418131/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/compactions/CompactionProgress.java
+END
+CompactionRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/repos/asf/!svn/ver/1451057/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/compactions/CompactionRequest.java
+END

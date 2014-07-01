@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1401332/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/example
+END
+BulkDeleteResponse.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1401332/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/example/BulkDeleteResponse.java
+END
+ZooKeeperScanPolicyObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1377155/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/example/ZooKeeperScanPolicyObserver.java
+END
+BulkDeleteEndpoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1401332/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/example/BulkDeleteEndpoint.java
+END
+BulkDeleteProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1401332/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/coprocessor/example/BulkDeleteProtocol.java
+END

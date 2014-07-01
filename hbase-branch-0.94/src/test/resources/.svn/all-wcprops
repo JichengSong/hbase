@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/asf/!svn/ver/1494871/hbase/branches/0.94/src/test/resources
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/resources/log4j.properties
+END
+mapred-queues.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/resources/mapred-queues.xml
+END
+hbase-site.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/asf/!svn/ver/1494871/hbase/branches/0.94/src/test/resources/hbase-site.xml
+END

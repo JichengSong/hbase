@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/packages/deb/conf-pseudo.control
+END
+postinst
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/packages/deb/conf-pseudo.control/postinst
+END
+conffile
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/packages/deb/conf-pseudo.control/conffile
+END
+prerm
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/packages/deb/conf-pseudo.control/prerm
+END
+control
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/packages/deb/conf-pseudo.control/control
+END

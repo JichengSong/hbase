@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/repos/asf/!svn/ver/1595266/hbase/branches/0.94
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/.gitignore
+END
+CHANGES.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/asf/!svn/ver/1588996/hbase/branches/0.94/CHANGES.txt
+END
+.arcconfig
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/.arcconfig
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/repos/asf/!svn/ver/1591477/hbase/branches/0.94/pom.xml
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/README.txt
+END
+NOTICE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/asf/!svn/ver/1405074/hbase/branches/0.94/NOTICE.txt
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/LICENSE.txt
+END

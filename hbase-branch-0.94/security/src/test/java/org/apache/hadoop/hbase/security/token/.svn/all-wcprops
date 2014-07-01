@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/token
+END
+TestZKSecretWatcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/token/TestZKSecretWatcher.java
+END
+TestTokenAuthentication.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/security/src/test/java/org/apache/hadoop/hbase/security/token/TestTokenAuthentication.java
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1467157/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/constraint
+END
+AllPassConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/constraint/AllPassConstraint.java
+END
+RuntimeFailConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/constraint/RuntimeFailConstraint.java
+END
+TestConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1467157/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/constraint/TestConstraint.java
+END
+TestConstraints.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/constraint/TestConstraints.java
+END
+AllFailConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/constraint/AllFailConstraint.java
+END
+CheckConfigurationConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/constraint/CheckConfigurationConstraint.java
+END
+WorksConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/constraint/WorksConstraint.java
+END

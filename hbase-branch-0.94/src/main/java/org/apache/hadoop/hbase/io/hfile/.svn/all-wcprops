@@ -1,0 +1,221 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1541314/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile
+END
+CorruptHFileException.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1377942/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/CorruptHFileException.java
+END
+BlockCacheKey.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/BlockCacheKey.java
+END
+HFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1534855/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFile.java
+END
+CachedBlockQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/CachedBlockQueue.java
+END
+CacheConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1402385/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/CacheConfig.java
+END
+BlockType.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/BlockType.java
+END
+HFileDataBlockEncoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1352221/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileDataBlockEncoder.java
+END
+HFileWriterV2.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1459961/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileWriterV2.java
+END
+AbstractHFileReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1531792/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/AbstractHFileReader.java
+END
+LruBlockCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1484034/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/LruBlockCache.java
+END
+Compression.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1458439/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/Compression.java
+END
+HFileScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileScanner.java
+END
+ReusableStreamGzipCodec.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/ReusableStreamGzipCodec.java
+END
+AbstractHFileWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1298658/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/AbstractHFileWriter.java
+END
+DoubleBlockCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1408621/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/DoubleBlockCache.java
+END
+NoOpDataBlockEncoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1352221/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/NoOpDataBlockEncoder.java
+END
+HFileReaderV1.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1452465/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileReaderV1.java
+END
+FixedFileTrailer.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1377942/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/FixedFileTrailer.java
+END
+CacheStats.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/CacheStats.java
+END
+InlineBlockWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/InlineBlockWriter.java
+END
+Cacheable.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/Cacheable.java
+END
+SimpleBlockCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1408621/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/SimpleBlockCache.java
+END
+BoundedRangeFileInputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/BoundedRangeFileInputStream.java
+END
+CacheableDeserializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/CacheableDeserializer.java
+END
+HFileBlockIndex.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1423112/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileBlockIndex.java
+END
+HFileWriterV1.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1459961/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileWriterV1.java
+END
+ChecksumUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1298666/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/ChecksumUtil.java
+END
+HFileBlock.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1438175/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileBlock.java
+END
+HFilePrettyPrinter.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1526353/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFilePrettyPrinter.java
+END
+BlockWithScanInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1399521/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/BlockWithScanInfo.java
+END
+BlockCacheColumnFamilySummary.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/BlockCacheColumnFamilySummary.java
+END
+InvalidHFileException.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/InvalidHFileException.java
+END
+HFileDataBlockEncoderImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1352221/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileDataBlockEncoderImpl.java
+END
+BlockCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1408621/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/BlockCache.java
+END
+CachedBlock.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/CachedBlock.java
+END
+HFileReaderV2.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1541314/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/hfile/HFileReaderV2.java
+END

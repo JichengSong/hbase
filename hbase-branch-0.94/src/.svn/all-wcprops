@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/repos/asf/!svn/ver/1595266/hbase/branches/0.94/src
+END
+saveVersion.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/repos/asf/!svn/ver/1555961/hbase/branches/0.94/src/saveVersion.sh
+END

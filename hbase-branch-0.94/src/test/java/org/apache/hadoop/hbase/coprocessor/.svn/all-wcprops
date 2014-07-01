@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/repos/asf/!svn/ver/1572166/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor
+END
+TestCoprocessorEndpoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1409431/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestCoprocessorEndpoint.java
+END
+TestClassLoading.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1471756/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestClassLoading.java
+END
+TestMasterObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1496240/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestMasterObserver.java
+END
+SimpleRegionObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1450465/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/SimpleRegionObserver.java
+END
+ColumnAggregationEndpoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/ColumnAggregationEndpoint.java
+END
+TestMasterCoprocessorExceptionWithRemove.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestMasterCoprocessorExceptionWithRemove.java
+END
+TestRegionObserverScannerOpenHook.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/repos/asf/!svn/ver/1572166/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestRegionObserverScannerOpenHook.java
+END
+TestAggregateProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestAggregateProtocol.java
+END
+TestRegionObserverInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1509572/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestRegionObserverInterface.java
+END
+GenericEndpoint.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/GenericEndpoint.java
+END
+TestRegionObserverBypass.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestRegionObserverBypass.java
+END
+TestRegionObserverStacking.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1509572/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestRegionObserverStacking.java
+END
+TestMasterCoprocessorExceptionWithAbort.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestMasterCoprocessorExceptionWithAbort.java
+END
+TestBigDecimalColumnInterpreter.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1436726/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestBigDecimalColumnInterpreter.java
+END
+TestCoprocessorInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1509572/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestCoprocessorInterface.java
+END
+TestOpenTableInCoprocessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1550567/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestOpenTableInCoprocessor.java
+END
+TestRegionServerCoprocessorExceptionWithRemove.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/repos/asf/!svn/ver/1502628/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestRegionServerCoprocessorExceptionWithRemove.java
+END
+ColumnAggregationProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/ColumnAggregationProtocol.java
+END
+TestWALObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestWALObserver.java
+END
+GenericProtocol.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/GenericProtocol.java
+END
+TestRegionServerCoprocessorExceptionWithAbort.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/repos/asf/!svn/ver/1502709/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestRegionServerCoprocessorExceptionWithAbort.java
+END
+TestHTableWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1537739/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/TestHTableWrapper.java
+END
+SampleRegionWALObserver.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/coprocessor/SampleRegionWALObserver.java
+END

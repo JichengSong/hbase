@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1480887/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/client/coprocessor
+END
+Batch.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/client/coprocessor/Batch.java
+END
+LongColumnInterpreter.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/client/coprocessor/LongColumnInterpreter.java
+END
+BigDecimalColumnInterpreter.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/repos/asf/!svn/ver/1480887/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/client/coprocessor/BigDecimalColumnInterpreter.java
+END
+ExecResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1409431/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/client/coprocessor/ExecResult.java
+END
+Exec.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1409431/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/client/coprocessor/Exec.java
+END
+package-info.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/client/coprocessor/package-info.java
+END
+AggregationClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1360342/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/client/coprocessor/AggregationClient.java
+END

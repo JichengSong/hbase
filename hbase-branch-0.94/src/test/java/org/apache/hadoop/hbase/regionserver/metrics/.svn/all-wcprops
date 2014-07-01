@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1404691/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/regionserver/metrics
+END
+TestSchemaConfigured.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/regionserver/metrics/TestSchemaConfigured.java
+END
+TestSchemaMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1404691/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/regionserver/metrics/TestSchemaMetrics.java
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/repos/asf/!svn/ver/1490079/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/codec
+END
+Encoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1490079/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/codec/Encoder.java
+END
+BaseDecoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1490079/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/codec/BaseDecoder.java
+END
+KeyValueCodec.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1490079/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/codec/KeyValueCodec.java
+END
+Decoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1490079/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/codec/Decoder.java
+END
+BaseEncoder.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1490079/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/codec/BaseEncoder.java
+END
+CodecException.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1490079/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/codec/CodecException.java
+END
+Codec.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1490079/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/codec/Codec.java
+END

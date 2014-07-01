@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/repos/asf/!svn/ver/1543936/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/tool
+END
+Canary.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1329900/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/tool/Canary.java
+END
+WriteSinkCoprocessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1543936/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/tool/WriteSinkCoprocessor.java
+END

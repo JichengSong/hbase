@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/repos/asf/!svn/ver/1509512/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure
+END
+ProcedureMember.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1509512/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/ProcedureMember.java
+END
+Subprocedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1509512/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/Subprocedure.java
+END
+ProcedureCoordinatorRpcs.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/ProcedureCoordinatorRpcs.java
+END
+Procedure.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/Procedure.java
+END
+ProcedureMemberRpcs.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1495945/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/ProcedureMemberRpcs.java
+END
+ZKProcedureCoordinatorRpcs.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1495945/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/ZKProcedureCoordinatorRpcs.java
+END
+SubprocedureFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/SubprocedureFactory.java
+END
+ZKProcedureUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1495945/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/ZKProcedureUtil.java
+END
+ProcedureCoordinator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/repos/asf/!svn/ver/1509512/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/ProcedureCoordinator.java
+END
+ZKProcedureMemberRpcs.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1504351/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/procedure/ZKProcedureMemberRpcs.java
+END

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1572892/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io
+END
+HalfStoreFileReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1462231/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/HalfStoreFileReader.java
+END
+HbaseMapWritable.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/HbaseMapWritable.java
+END
+TimeRange.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/TimeRange.java
+END
+FileLink.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1572892/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/FileLink.java
+END
+Reference.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1465747/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/Reference.java
+END
+ImmutableBytesWritable.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1520143/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/ImmutableBytesWritable.java
+END
+WritableWithSize.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/WritableWithSize.java
+END
+HbaseObjectWritable.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1556027/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/HbaseObjectWritable.java
+END
+HFileLink.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/asf/!svn/ver/1515967/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/HFileLink.java
+END
+CodeToClassAndBack.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/CodeToClassAndBack.java
+END
+DoubleOutputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/DoubleOutputStream.java
+END
+HLogLink.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/HLogLink.java
+END
+DataOutputOutputStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1344927/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/DataOutputOutputStream.java
+END
+HeapSize.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/io/HeapSize.java
+END

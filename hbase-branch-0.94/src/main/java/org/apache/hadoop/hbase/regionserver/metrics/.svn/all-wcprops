@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1595266/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics
+END
+RegionMetricsStorage.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1452648/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics/RegionMetricsStorage.java
+END
+RegionServerMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1550997/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics/RegionServerMetrics.java
+END
+RegionServerStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics/RegionServerStatistics.java
+END
+RegionServerDynamicMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/repos/asf/!svn/ver/1401382/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics/RegionServerDynamicMetrics.java
+END
+SchemaConfigured.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1550809/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics/SchemaConfigured.java
+END
+OperationMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1452648/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics/OperationMetrics.java
+END
+SchemaMetrics.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1595266/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics/SchemaMetrics.java
+END
+RegionServerDynamicStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/repos/asf/!svn/ver/1308970/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/regionserver/metrics/RegionServerDynamicStatistics.java
+END

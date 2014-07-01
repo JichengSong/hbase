@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/repos/asf/!svn/ver/1521662/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner
+END
+BaseLogCleanerDelegate.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1521662/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/BaseLogCleanerDelegate.java
+END
+HFileCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1452257/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/HFileCleaner.java
+END
+TimeToLiveHFileCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/repos/asf/!svn/ver/1506176/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/TimeToLiveHFileCleaner.java
+END
+FileCleanerDelegate.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1521662/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/FileCleanerDelegate.java
+END
+BaseHFileCleanerDelegate.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/repos/asf/!svn/ver/1521662/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/BaseHFileCleanerDelegate.java
+END
+CleanerChore.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1521662/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/CleanerChore.java
+END
+LogCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1404762/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/LogCleaner.java
+END
+TimeToLiveLogCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1506176/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/TimeToLiveLogCleaner.java
+END
+BaseFileCleanerDelegate.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/repos/asf/!svn/ver/1521662/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/BaseFileCleanerDelegate.java
+END
+HFileLinkCleaner.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1521662/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/master/cleaner/HFileLinkCleaner.java
+END

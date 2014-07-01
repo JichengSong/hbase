@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/asf/!svn/ver/1520488/hbase/branches/0.94/src/main/ruby/hbase
+END
+security.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/asf/!svn/ver/1466826/hbase/branches/0.94/src/main/ruby/hbase/security.rb
+END
+table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/asf/!svn/ver/1504659/hbase/branches/0.94/src/main/ruby/hbase/table.rb
+END
+admin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/asf/!svn/ver/1520488/hbase/branches/0.94/src/main/ruby/hbase/admin.rb
+END
+replication_admin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/asf/!svn/ver/1513333/hbase/branches/0.94/src/main/ruby/hbase/replication_admin.rb
+END
+hbase.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/ruby/hbase/hbase.rb
+END

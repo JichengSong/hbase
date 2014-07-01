@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/repos/asf/!svn/ver/1304918/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model
+END
+TestTableInfoModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestTableInfoModel.java
+END
+TestTableListModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestTableListModel.java
+END
+TestVersionModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestVersionModel.java
+END
+TestRowModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestRowModel.java
+END
+TestTableSchemaModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestTableSchemaModel.java
+END
+TestScannerModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestScannerModel.java
+END
+TestStorageClusterStatusModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1304918/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestStorageClusterStatusModel.java
+END
+TestCellSetModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestCellSetModel.java
+END
+TestTableRegionModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestTableRegionModel.java
+END
+TestStorageClusterVersionModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestStorageClusterVersionModel.java
+END
+TestColumnSchemaModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestColumnSchemaModel.java
+END
+TestCellModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/rest/model/TestCellModel.java
+END

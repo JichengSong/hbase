@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/repos/asf/!svn/ver/1467157/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/ipc
+END
+TestDelayedRpc.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1439723/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/ipc/TestDelayedRpc.java
+END
+TestPBOnWritableRpc.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/repos/asf/!svn/ver/1467157/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/ipc/TestPBOnWritableRpc.java
+END
+TestProtocolExtension.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1439723/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/ipc/TestProtocolExtension.java
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/repos/asf/!svn/ver/1456317/hbase/branches/0.94/src/site/xdoc
+END
+acid-semantics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/acid-semantics.xml
+END
+metrics.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/metrics.xml
+END
+sponsors.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/sponsors.xml
+END
+index.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/index.xml
+END
+replication.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/replication.xml
+END
+old_news.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/old_news.xml
+END
+resources.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/asf/!svn/ver/1456317/hbase/branches/0.94/src/site/xdoc/resources.xml
+END
+bulk-loads.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/bulk-loads.xml
+END
+pseudo-distributed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/pseudo-distributed.xml
+END
+cygwin.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/repos/asf/!svn/ver/1455996/hbase/branches/0.94/src/site/xdoc/cygwin.xml
+END

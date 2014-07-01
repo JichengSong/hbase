@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/asf/!svn/ver/1584514/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client
+END
+TestAdmin.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1554879/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestAdmin.java
+END
+TestHTablePool.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1513301/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestHTablePool.java
+END
+TestCoprocessorHConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/repos/asf/!svn/ver/1524827/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestCoprocessorHConnection.java
+END
+HConnectionTestingUtility.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1511545/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/HConnectionTestingUtility.java
+END
+TestFromClientSide3.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1462622/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestFromClientSide3.java
+END
+TestTimestampsFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestTimestampsFilter.java
+END
+TestSnapshotFromAdmin.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/repos/asf/!svn/ver/1468671/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestSnapshotFromAdmin.java
+END
+TestHTableUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestHTableUtil.java
+END
+TestMetaScanner.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1507768/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestMetaScanner.java
+END
+TestOperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1303503/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestOperation.java
+END
+TestScannerTimeout.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1502628/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestScannerTimeout.java
+END
+TestMultipleTimestamps.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestMultipleTimestamps.java
+END
+TestCloneSnapshotFromClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/repos/asf/!svn/ver/1508811/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestCloneSnapshotFromClient.java
+END
+TestFromClientSideWithSecureRpcEngine.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/repos/asf/!svn/ver/1583480/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestFromClientSideWithSecureRpcEngine.java
+END
+TestMetaMigrationRemovingHTD.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/repos/asf/!svn/ver/1408012/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestMetaMigrationRemovingHTD.java
+END
+TestHConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/repos/asf/!svn/ver/1511545/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestHConnection.java
+END
+TestHCM.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1511545/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestHCM.java
+END
+TestFromClientSide.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/repos/asf/!svn/ver/1584514/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestFromClientSide.java
+END
+TestMultiParallel.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/repos/asf/!svn/ver/1557003/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestMultiParallel.java
+END
+TestShell.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestShell.java
+END
+TestPutDotHas.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/repos/asf/!svn/ver/1341740/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestPutDotHas.java
+END
+TestResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/repos/asf/!svn/ver/1508176/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestResult.java
+END
+TestGet.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/repos/asf/!svn/ver/1556027/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestGet.java
+END
+TestSnapshotsFromAdmin.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1468671/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestSnapshotsFromAdmin.java
+END
+TestConnectionUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/repos/asf/!svn/ver/1352711/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestConnectionUtils.java
+END
+TestSnapshotFromClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/repos/asf/!svn/ver/1508811/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestSnapshotFromClient.java
+END
+TestScan.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestScan.java
+END
+TestFromClientSideWithCoprocessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/repos/asf/!svn/ver/1367402/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestFromClientSideWithCoprocessor.java
+END
+TestAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1346509/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestAttributes.java
+END
+TestRestoreSnapshotFromClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/repos/asf/!svn/ver/1574599/hbase/branches/0.94/src/test/java/org/apache/hadoop/hbase/client/TestRestoreSnapshotFromClient.java
+END

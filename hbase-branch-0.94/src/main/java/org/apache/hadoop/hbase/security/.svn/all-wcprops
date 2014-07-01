@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/repos/asf/!svn/ver/1540241/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/security
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1540241/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/security/User.java
+END
+KerberosInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/security/KerberosInfo.java
+END
+TokenInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/repos/asf/!svn/ver/1294469/hbase/branches/0.94/src/main/java/org/apache/hadoop/hbase/security/TokenInfo.java
+END

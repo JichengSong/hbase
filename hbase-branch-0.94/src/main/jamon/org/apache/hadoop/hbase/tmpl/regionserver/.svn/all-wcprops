@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/repos/asf/!svn/ver/1547706/hbase/branches/0.94/src/main/jamon/org/apache/hadoop/hbase/tmpl/regionserver
+END
+RSStatusTmpl.jamon
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/repos/asf/!svn/ver/1547706/hbase/branches/0.94/src/main/jamon/org/apache/hadoop/hbase/tmpl/regionserver/RSStatusTmpl.jamon
+END
