@@ -44,12 +44,12 @@ import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableDescriptors;
 import org.apache.hadoop.hbase.TableInfoMissingException;
 
-/**
+/**是TableDescriptors的实现类,从文件系统读取(HBase Table)描述文件.
  * Implementation of {@link TableDescriptors} that reads descriptors from the
  * passed filesystem.  It expects descriptors to be in a file under the
  * table's directory in FS.  Can be read-only -- i.e. does not modify
  * the filesystem or can be read and write.
- * 
+ * 这个类拥有保存table 描述文件(.tableinfo.)的实用方法.
  * <p>Also has utility for keeping up the table descriptors tableinfo file.
  * The table schema file is kept under the table directory in the filesystem.
  * It has a {@link #TABLEINFO_NAME} prefix and then a suffix that is the

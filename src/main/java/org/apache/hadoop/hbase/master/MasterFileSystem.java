@@ -55,7 +55,7 @@ import org.apache.hadoop.hbase.util.EnvironmentEdgeManager;
 import org.apache.hadoop.hbase.util.FSTableDescriptors;
 import org.apache.hadoop.hbase.util.FSUtils;
 
-/**
+/**这个类抽象了HMaster与底层文件系统交互所需的一系列操作,包括split log,检查文件系统状态等.
  * This class abstracts a bunch of operations the HMaster needs to interact with
  * the underlying file system, including splitting log files, checking file
  * system status, etc.

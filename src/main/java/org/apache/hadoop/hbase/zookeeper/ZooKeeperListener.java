@@ -19,14 +19,14 @@
  */
 package org.apache.hadoop.hbase.zookeeper;
 
-
-/**
+/**内部侦听Zookeeper事件的基类.
  * Base class for internal listeners of ZooKeeper events.
- *
+ *(1).一个进程的ZookeeperWatcher将执行ZookeeperListener父类的某个方法。为了从watcher收到事件，
+ *    每个listener必须通过ZookeeperWatcher.registerListener注册自己.
  * The {@link ZooKeeperWatcher} for a process will execute the appropriate
  * methods of implementations of this class.  In order to receive events from
  * the watcher, every listener must register itself via {@link ZooKeeperWatcher#registerListener}.
- *
+ *(2).子类之需要重写自己感兴趣的方法，注意,wather在调用listeners里的方法时将会被阻塞，所以listener里的方法不要long-running
  * Subclasses need only override those methods in which they are interested.
  *
  * Note that the watcher will be blocked when invoking methods in listeners so

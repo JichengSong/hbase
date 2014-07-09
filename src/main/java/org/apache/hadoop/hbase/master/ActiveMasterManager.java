@@ -32,27 +32,27 @@ import org.apache.hadoop.hbase.zookeeper.ZooKeeperListener;
 import org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher;
 import org.apache.zookeeper.KeeperException;
 
-/**
+/**处理master端所有与master选举相关的事情
  * Handles everything on master-side related to master election.
- *
+ *(1).侦听并响应关于master znode的zk通知(ZK Notifications),包括nodeCreated和nodeDeleted.
  * <p>Listens and responds to ZooKeeper notifications on the master znode,
  * both <code>nodeCreated</code> and <code>nodeDeleted</code>.
- *
+ *(2).包括一个阻塞方法:持有backup masters，等待active master挂掉.
  * <p>Contains blocking methods which will hold up backup masters, waiting
  * for the active master to fail.
- *
+ *(3).这个class在HMaster里被初始化,HMaster调用blockUntilBecomingActiveMaster()以等待成为active master.
  * <p>This class is instantiated in the HMaster constructor and the method
  * #blockUntilBecomingActiveMaster() is called to wait until becoming
  * the active master of the cluster.
  */
 public class ActiveMasterManager extends ZooKeeperListener {
   private static final Log LOG = LogFactory.getLog(ActiveMasterManager.class);
-
+  //1.两个原子对象,标识cluster是否有activeMaster 是否shutDown.
   final AtomicBoolean clusterHasActiveMaster = new AtomicBoolean(false);
   final AtomicBoolean clusterShutDown = new AtomicBoolean(false);
-
-  private final ServerName sn;
-  private final Server master;
+  //2.
+  private final ServerName sn; //server名
+  private final Server master; //HMaster实例 .(HMaster HRegionServer等都实现了Server接口)
 
   /**
    * @param watcher
@@ -123,7 +123,7 @@ public class ActiveMasterManager extends ZooKeeperListener {
     }
   }
 
-  /**
+  /**阻塞等待，直到自己成为active master
    * Block until becoming the active master.
    *
    * Method blocks until there is not another active master and our attempt

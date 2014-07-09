@@ -26,7 +26,7 @@ import org.apache.hadoop.hbase.util.Addressing;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.zookeeper.KeeperException;
 
-/**
+/**追踪存放在zookeeper中的root region 的server地址
  * Tracks the root region server location node in zookeeper.
  * Root region location is set by {@link RootLocationEditor} usually called
  * out of <code>RegionServerServices</code>.

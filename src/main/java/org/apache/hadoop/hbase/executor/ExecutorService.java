@@ -46,7 +46,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
 
-/**
+/**一个通用的执行器服务.这个组件抽象了一个threadpool,一个队列,和一个Runnable线程(Handler角色)
  * This is a generic executor service. This component abstracts a
  * threadpool, a queue to which {@link EventHandler.EventType}s can be submitted,
  * and a <code>Runnable</code> that handles the object that is added to the queue.

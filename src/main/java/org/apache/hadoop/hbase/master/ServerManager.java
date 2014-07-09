@@ -52,7 +52,7 @@ import org.apache.hadoop.hbase.master.handler.ServerShutdownHandler;
 import org.apache.hadoop.hbase.monitoring.MonitoredTask;
 import org.apache.hadoop.hbase.regionserver.RegionOpeningState;
 
-/**
+/**管理所有的regionServer信息.
  * The ServerManager class manages info about region servers.
  * <p>
  * Maintains lists of online and dead servers.  Processes the startups,
