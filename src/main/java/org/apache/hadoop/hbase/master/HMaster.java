@@ -402,10 +402,10 @@ Server {
       TaskMonitor.get().createStatus("Master startup");
     startupStatus.setDescription("Master startup");
     masterStartTime = System.currentTimeMillis();
-    try {
+    try {//
       this.registeredZKListenersBeforeRecovery = this.zooKeeper.getListeners();
 
-      // Put up info server.
+      //1.启动info server // Put up info server.
       int port = this.conf.getInt("hbase.master.info.port", 60010);
       if (port >= 0) {
         String a = this.conf.get("hbase.master.info.bindAddress", "0.0.0.0");
@@ -415,7 +415,7 @@ Server {
         this.infoServer.setAttribute(MASTER, this);
         this.infoServer.start();
       }
-
+      //2.尝试成为active master. 整个HMaster的生命周期都在becomeActiveMaster()里
       /*
        * Block on becoming the active master.
        *
@@ -427,9 +427,9 @@ Server {
        * do not succeed on our first attempt, this is no longer a cluster startup.
        */
       becomeActiveMaster(startupStatus);
-
+      //3.如果我们是active master 或者我们被要求shutdown ，执行收尾清理工作
       // We are either the active master or we were asked to shutdown
-      if (!this.stopped) {
+      if (!this.stopped) {//finishInitialization(startupStatus,masterRecovery),masterRecovery=true
         finishInitialization(startupStatus, false);
         loop();
       }
@@ -558,46 +558,47 @@ Server {
    */
   private void finishInitialization(MonitoredTask status, boolean masterRecovery)
   throws IOException, InterruptedException, KeeperException {
-
+	//将是否为active master标识置true
     isActiveMaster = true;
-
-    /*
+  
+    /*我们已经是active master了，开始初始化相关组件.
+     * 注意，ZK里可能有先前master留下的碎屑. 在我们确定集群是否启动/挂掉后,碎屑问题会被解决.
      * We are active master now... go initialize components we need to run.
      * Note, there may be dross in zk from previous runs; it'll get addressed
      * below after we determine if cluster startup or failover.
      */
-
     status.setStatus("Initializing Master file system");
     this.masterActiveTime = System.currentTimeMillis();
     // TODO: Do this using Dependency Injection, using PicoContainer, Guice or Spring.
+    // 1.创建HBase文件系统 MasterFileSystem.(抽象了HMaster与低层文件系统交互所需的一系列接口)
     this.fileSystemManager = new MasterFileSystem(this, this, metrics, masterRecovery);
-
+    // 2.初始化tableDescriptors，从文件系统读取HTable的描述信息.
     this.tableDescriptors =
       new FSTableDescriptors(this.fileSystemManager.getFileSystem(),
       this.fileSystemManager.getRootDir());
-
+    // 3. 发布cluster ID. (// 从hdfs:///hbase/hbase.id文件中读取clusterId)
     // publish cluster ID
     status.setStatus("Publishing Cluster ID in ZooKeeper");
     ClusterId.setClusterId(this.zooKeeper, fileSystemManager.getClusterId());
-    if (!masterRecovery) {
-      this.executorService = new ExecutorService(getServerName().toString());
-      this.serverManager = new ServerManager(this, this);
+    if (!masterRecovery) {//4.如果不是recoveryMaster操作:
+      //初始化ExecutorService和serverManager  
+      this.executorService = new ExecutorService(getServerName().toString());//维护一个threadPool和队列
+      this.serverManager = new ServerManager(this, this);//管理所有的regionserver
     }
-
-
+    // 5.初始化ZK system trackers
     status.setStatus("Initializing ZK system trackers");
     initializeZKBasedSystemTrackers();
-
-    if (!masterRecovery) {
+    // 6.如果不是masterRecovery
+    if (!masterRecovery) {//(6.1).在启动handler前，初始化master端的coprocessors.
       // initialize master side coprocessors before we start handling requests
       status.setStatus("Initializing master coprocessors");
       this.cpHost = new MasterCoprocessorHost(this, this.conf);
-
+      //(6.2)启动所有的服务线程.
       // start up all service threads.
       status.setStatus("Initializing master service threads");
       startServiceThreads();
     }
-
+    // 7.等待region servers汇报过来.
     // Wait for region servers to report in.
     this.serverManager.waitForRegionServers(status);
     // Check zk for regionservers that are up but didn't register
@@ -608,34 +609,34 @@ Server {
           "reported in: " + sn);
         this.serverManager.recordNewServer(sn, HServerLoad.EMPTY_HSERVERLOAD);
       }
-    }
+    }//8.如果不是masterRecovery，
     if (!masterRecovery) {
       this.assignmentManager.startTimeOutMonitor();
     }
-
+    // 9.获取以前失败的region server列表. 这写region server需要做恢复工作. 
     // get a list for previously failed RS which need recovery work
     Set<ServerName> failedServers = this.fileSystemManager.getFailedServersFromLogFolders();
-    if (waitingOnLogSplitting) {
+    if (waitingOnLogSplitting) {//如果waitingOnLogSplitting为true,Master需要等到log spliting完毕方可启动
       List<ServerName> servers = new ArrayList<ServerName>(failedServers);
-      this.fileSystemManager.splitAllLogs(servers);
-      failedServers.clear();
+      this.fileSystemManager.splitAllLogs(servers);//处理所有的dead region server上的log
+      failedServers.clear();//清空failedServer
     }
-
+    // 10.1 如果以前的root server在failedServer里，为_ROOT_ server创建recovered edits文件.
     ServerName preRootServer = this.catalogTracker.getRootLocation();
     if (preRootServer != null && failedServers.contains(preRootServer)) {
       // create recovered edits file for _ROOT_ server
       this.fileSystemManager.splitAllLogs(preRootServer);
       failedServers.remove(preRootServer);
     }
-
+    // 
     this.initializationBeforeMetaAssignment = true;
-    // Make sure root assigned before proceeding.
+    //10.2 确保-ROOT-被分配到某个regionserver.// Make sure root assigned before proceeding.
     if (!assignRoot(status)) return;
-
+    // 在META region被分配之前,开启ROOT的SSH服务?
     // SSH should enabled for ROOT before META region assignment
     // because META region assignment is depending on ROOT server online.
     this.serverManager.enableSSHForRoot();
-
+    // 11.1 如果failedServer包括.META. server：
     // log splitting for .META. server
     ServerName preMetaServer = this.catalogTracker.getMetaLocationOrReadLocationFromRoot();
     if (preMetaServer != null && failedServers.contains(preMetaServer)) {
@@ -643,7 +644,7 @@ Server {
       this.fileSystemManager.splitAllLogs(preMetaServer);
       failedServers.remove(preMetaServer);
     }
-
+    // 11.2 确保.META.表被分配到regionserver.
     // Make sure meta assigned before proceeding.
     if (!assignMeta(status, ((masterRecovery) ? null : preMetaServer), preRootServer)) return;
 
@@ -654,21 +655,21 @@ Server {
     for (ServerName curServer : failedServers) {
       this.serverManager.expireServer(curServer);
     }
-
+    //12. 如果有必要，用心的HRI更新meta表. 这个操作需要在分配所有的用户region之前完成.
     // Update meta with new HRI if required. i.e migrate all HRI with HTD to
     // HRI with out HTD in meta and update the status in ROOT. This must happen
     // before we assign all user regions or else the assignment will fail.
     // TODO: Remove this when we do 0.94.
     org.apache.hadoop.hbase.catalog.MetaMigrationRemovingHTD.
       updateMetaWithNewHRI(this);
-
+    //13.修正assignment manager的状态
     // Fixup assignment manager status
     status.setStatus("Starting assignment manager");
     this.assignmentManager.joinCluster();
 
     this.balancer.setClusterStatus(getClusterStatus());
     this.balancer.setMasterServices(this);
-
+    //14. 解决/修正 missing daughters
     // Fixing up missing daughters if any
     status.setStatus("Fixing up missing daughters");
     fixupDaughters(status);
@@ -985,7 +986,7 @@ Server {
    *  need to install an unexpected exception handler.
    */
   private void startServiceThreads() throws IOException{
-
+   // 1.启动执行器服务池 (executor service pools)
    // Start the executor service pools
    this.executorService.startExecutorService(ExecutorType.MASTER_OPEN_REGION,
       conf.getInt("hbase.master.executor.openregion.threads", 5));
@@ -995,12 +996,12 @@ Server {
       conf.getInt("hbase.master.executor.serverops.threads", 3));
    this.executorService.startExecutorService(ExecutorType.MASTER_META_SERVER_OPERATIONS,
       conf.getInt("hbase.master.executor.serverops.threads", 5));
-
+   // 
    // We depend on there being only one instance of this executor running
    // at a time.  To do concurrency, would need fencing of enable/disable of
    // tables.
    this.executorService.startExecutorService(ExecutorType.MASTER_TABLE_OPERATIONS, 1);
-
+   // 2.启动日志清理线程
    // Start log cleaner thread
    String n = Thread.currentThread().getName();
    int cleanerInterval = conf.getInt("hbase.master.cleaner.interval", 60 * 1000);
@@ -1009,18 +1010,18 @@ Server {
          this, conf, getMasterFileSystem().getFileSystem(),
          getMasterFileSystem().getOldLogDir());
          Threads.setDaemonThreadRunning(logCleaner.getThread(), n + ".oldLogCleaner");
-
+   // 3.启动hfile archive清理线程
    //start the hfile archive cleaner thread
     Path archiveDir = HFileArchiveUtil.getArchivePath(conf);
     this.hfileCleaner = new HFileCleaner(cleanerInterval, this, conf, getMasterFileSystem()
         .getFileSystem(), archiveDir);
     Threads.setDaemonThreadRunning(hfileCleaner.getThread(), n + ".archivedHFileCleaner");
-
+   // 4.启动健康检查线程
    // Start the health checker
    if (this.healthCheckChore != null) {
      Threads.setDaemonThreadRunning(this.healthCheckChore.getThread(), n + ".healthChecker");
    }
-
+   // 5.开始允许用户请求 (开启rpc server服务)
     // Start allowing requests to happen.
     this.rpcServer.openServer();
     if (LOG.isDebugEnabled()) {
