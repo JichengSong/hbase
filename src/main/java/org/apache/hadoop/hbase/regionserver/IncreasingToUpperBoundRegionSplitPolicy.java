@@ -60,16 +60,16 @@ extends ConstantSizeRegionSplitPolicy {
         HTableDescriptor.DEFAULT_MEMSTORE_FLUSH_SIZE);
     }
   }
-
+  /**检查是否应该split*/
   @Override
   protected boolean shouldSplit() {
-    if (region.shouldForceSplit()) return true;
+    if (region.shouldForceSplit()) return true;//1.如果是强制split(也即有split request)，返回true.
     boolean foundABigStore = false;
     // Get count of regions that have the same common table as this.region
-    int tableRegionsCount = getCountOfCommonTableRegions();
-    // Get size to check
-    long sizeToCheck = getSizeToCheck(tableRegionsCount);
-
+    int tableRegionsCount = getCountOfCommonTableRegions();//2.1计算当前rs上拥有当前table的region数目
+    // Get size to check                                   //2.2:返回Math.main(tableRegionsCount*tableRegionsCount*MEMSTORE_FLUSHSIZE，
+    long sizeToCheck = getSizeToCheck(tableRegionsCount);  //MAX_FILESIZE);其中MEMTORE_FLUSHSIZE MAX_FILESIZE在创建时指定，如果未指定，则
+    													   //取hbase.hregion.memstore.flush.size(默认128M),hbase.hregion.max.filesize(默认10G)  		
     for (Store store : region.getStores().values()) {
       // If any of the stores is unable to split (eg they contain reference files)
       // then don't split
