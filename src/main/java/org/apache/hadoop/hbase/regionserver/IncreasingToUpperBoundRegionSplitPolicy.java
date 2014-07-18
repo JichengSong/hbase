@@ -69,14 +69,14 @@ extends ConstantSizeRegionSplitPolicy {
     int tableRegionsCount = getCountOfCommonTableRegions();//2.1计算当前rs上拥有当前table的region数目
     // Get size to check                                   //2.2:返回Math.main(tableRegionsCount*tableRegionsCount*MEMSTORE_FLUSHSIZE，
     long sizeToCheck = getSizeToCheck(tableRegionsCount);  //MAX_FILESIZE);其中MEMTORE_FLUSHSIZE MAX_FILESIZE在创建时指定，如果未指定，则
-    													   //取hbase.hregion.memstore.flush.size(默认128M),hbase.hregion.max.filesize(默认10G)  		
+    //3.判断是否可以split									   //取hbase.hregion.memstore.flush.size(默认128M),hbase.hregion.max.filesize(默认10G)  		
     for (Store store : region.getStores().values()) {
       // If any of the stores is unable to split (eg they contain reference files)
       // then don't split
-      if ((!store.canSplit())) {
-        return false;
+      if ((!store.canSplit())) {//3.1如果该region的任何一个store不能split，返回false;(如果一个store所拥有的storefiles里，
+        return false;		    //任一个storfile属于reference store file,说明该store file被open()了，现在不能split)
       }
-
+      							//3.2 若有store的大小大约2.2得到的值，foundABigStore=true.
       // Mark if any store is big enough
       long size = store.getSize();
       if (size > sizeToCheck) {
@@ -86,7 +86,7 @@ extends ConstantSizeRegionSplitPolicy {
         foundABigStore = true;
       }
     }
-
+    //4.返回foundABigStore
     return foundABigStore;
   }
 
