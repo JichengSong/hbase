@@ -2551,13 +2551,13 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
   //
   // remote scanner interface
   //
-  
+  /*远程scanner接口: client远程调用该接口,HRegionServer初始化scanner,并为其分配scannerId,返回给调用者*/
   public long openScanner(byte[] regionName, Scan scan) throws IOException {
     RegionScanner s = internalOpenScanner(regionName, scan);
     long scannerId = addScanner(s);
     return scannerId;
   }
-
+  /**openScanner方法的内部实现*/
   private RegionScanner internalOpenScanner(byte[] regionName, Scan scan)
       throws IOException {
     checkOpen();
@@ -2616,7 +2616,7 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
     }
     return res[0];
   }
-
+  /*获取下一组values*/
   public Result[] next(final long scannerId, int nbRows) throws IOException {
     String scannerName = String.valueOf(scannerId);
     RegionScanner s = this.scanners.get(scannerName);
@@ -2626,10 +2626,10 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
     }
     return internalNext(s, nbRows, scannerName);
   }
-
+  /**next(scannerId,nbRows)方法的内部实现*/
   private Result[] internalNext(final RegionScanner s, int nbRows,
       String scannerName) throws IOException {
-    try {
+    try {//(1).确保该RegionServer处于running状态
       checkOpen();
     } catch (IOException e) {
       // If checkOpen failed, server not running or filesystem gone,
@@ -2643,12 +2643,12 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
         }
       }
       throw e;
-    }
+    } 
     Leases.Lease lease = null;
     try {
       // Remove lease while its being processed in server; protects against case
       // where processing of request takes > lease expiration time.
-      try {
+      try {//(2).如果scannerName已经在server端排队等待处理,将其租约清除. 这是为了应对"取请求的时间"大于"租约过期时间"的情况。
         if (scannerName != null) {
           lease = this.leases.removeLease(scannerName);
         }
@@ -2660,7 +2660,7 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
       List<Result> results = new ArrayList<Result>(nbRows);
       long currentScanResultSize = 0;
       List<KeyValue> values = new ArrayList<KeyValue>();
-
+      //(3).调用coprocessor;从scanner获取region info.
       // Call coprocessor. Get region info from scanner.
       HRegion region = getRegion(s.getRegionInfo().getRegionName());
       if (region != null && region.getCoprocessorHost() != null) {
@@ -2680,7 +2680,7 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
               : results.toArray(new Result[0]);
         }
       }
-
+      //(4).调用regionscanner s的netRaw()方法,获取nbRows条数据.
       MultiVersionConsistencyControl.setThreadReadPoint(s.getMvccReadPoint());
       region.startRegionOperation();
       try {
@@ -2710,12 +2710,12 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
         region.setOpMetricsReadRequestCount(region.readRequestsCount.get());
       } finally {
         region.closeRegionOperation();
-      }
+      }//(5).调用coprocessor的清理函数.
       // coprocessor postNext hook
       if (region != null && region.getCoprocessorHost() != null) {
         region.getCoprocessorHost().postScannerNext(s, results, nbRows, true);
       }
-
+      //(6).如果scanner的filter操作执行结束了，需要告诉client停止scan操作；通过返回null result来实现.
       // If the scanner's filter - if any - is done with the scan
       // and wants to tell the client to stop the scan. This is done by passing
       // a null result.
@@ -2726,7 +2726,7 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
         this.scanners.remove(scannerName);
       }
       throw convertThrowableToIOE(cleanup(t));
-    } finally {
+    } finally {//(7).对上面(通过remove)获取到的租约,重置过期时间.
       // We're done. On way out readd the above removed lease.  Adding resets
       // expiration time on lease.
       if (scannerName != null && this.scanners.containsKey(scannerName)) {
