@@ -2710,7 +2710,7 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
         region.setOpMetricsReadRequestCount(region.readRequestsCount.get());
       } finally {
         region.closeRegionOperation();
-      }//(5).调用coprocessor的清理函数.
+      }//(5).调用coprocessor的清理函数
       // coprocessor postNext hook
       if (region != null && region.getCoprocessorHost() != null) {
         region.getCoprocessorHost().postScannerNext(s, results, nbRows, true);
