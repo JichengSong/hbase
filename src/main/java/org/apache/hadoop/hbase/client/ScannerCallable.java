@@ -122,14 +122,14 @@ public class ScannerCallable extends ServerCallable<Result[]> {
   public Result [] call() throws IOException {
     if (scannerId != -1L && closed) {
       close();
-    } else if (scannerId == -1L && !closed) {
-      this.scannerId = openScanner();
+    } else if (scannerId == -1L && !closed) {//1.获取scannerId,openScanner()方法将在RegionServer端初始化scanner.并为该scanner分配一个id
+      this.scannerId = openScanner();		 //参HRegion.getScanner(Scan scan, List<KeyValueScanner> additionalScanners)
     } else {
       Result [] rrs = null;
       try {
         incRPCcallsMetrics();
         long timestamp = System.currentTimeMillis();
-        rrs = server.next(scannerId, caching);
+        rrs = server.next(scannerId, caching);//2.向HRegionServer发起rpc请求:获取scannerId描述的scanner的下一行内容(Result).
         if (logScannerActivity) {
           long now = System.currentTimeMillis();
           if (now - timestamp > logCutOffLatency) {
