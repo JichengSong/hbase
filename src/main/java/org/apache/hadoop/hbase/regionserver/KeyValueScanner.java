@@ -25,30 +25,30 @@ import java.util.SortedSet;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.client.Scan;
 
-/**
+/**扫描器,能返回下一个KeyValue.
  * Scanner that returns the next KeyValue.
  */
 public interface KeyValueScanner {
-  /**
+  /**查找下一个KeyValue，但是不迭代(ps:连续多次peek返回的都是同一个KeyValue)
    * Look at the next KeyValue in this scanner, but do not iterate scanner.
    * @return the next KeyValue
    */
   public KeyValue peek();
 
-  /**
+  /**返回scanner的下一个KeyValue,迭代scanner.(联系两次next返回的是两个相临的KeyValue)
    * Return the next KeyValue in this scanner, iterating the scanner
    * @return the next KeyValue
    */
   public KeyValue next() throws IOException;
 
-  /**
+  /**将scanner的当前扫描光标移动到给定的KeyValue(或给定的KeyValue之后)
    * Seek the scanner at or after the specified KeyValue.
    * @param key seek value
    * @return true if scanner has values left, false if end of scanner
    */
   public boolean seek(KeyValue key) throws IOException;
 
-  /**
+  /**重新移动scanner的扫描光标到给定的KeyValue(或给定的KeyValue之后).这个方法确保给定的keyvalue在当前光标(current postion)之后产生时，才进行seek操作
    * Reseek the scanner at or after the specified KeyValue.
    * This method is guaranteed to seek at or after the required key only if the
    * key comes after the current position of the scanner. Should not be used
@@ -58,7 +58,7 @@ public interface KeyValueScanner {
    */
   public boolean reseek(KeyValue key) throws IOException;
 
-  /**
+  /**获取当前KeyValueScanner相关的sequence id. 这西药对比多个file以找到最新的数据. sequence id 越小，表明该数据越旧.
    * Get the sequence id associated with this KeyValueScanner. This is required
    * for comparing multiple files to find out which one has the latest data.
    * The default implementation for this would be to return 0. A file having
@@ -71,7 +71,7 @@ public interface KeyValueScanner {
    */
   public void close();
 
-  /**
+  /**是否允许过滤掉该scanner. (根据Bloom filter ，timestamp范围等)
    * Allows to filter out scanners (both StoreFile and memstore) that we don't
    * want to use based on criteria such as Bloom filters and timestamp ranges.
    * @param scan the scan that we are selecting scanners for
@@ -116,7 +116,7 @@ public interface KeyValueScanner {
    */
   public void enforceSeek() throws IOException;
 
-  /**
+  /**是否为file scanner.(非file scanner,就是memory scanner)
    * @return true if this is a file scanner. Otherwise a memory scanner is
    *         assumed.
    */
