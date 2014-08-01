@@ -3945,10 +3945,10 @@ public class HRegion implements HeapSize { // , Writable{
    */
   class RegionScannerImpl implements RegionScanner {
     // Package local for testability
-    KeyValueHeap storeHeap = null;
+    KeyValueHeap storeHeap = null;//这个堆主要用来filter？
     /** Heap of key-values that are not essential for the provided filters and are thus read
      * on demand, if on-demand column family loading is enabled.*/
-    KeyValueHeap joinedHeap = null;
+    KeyValueHeap joinedHeap = null;//这个堆维护的key-values对于filters是无用的，可以按需读取(前提是按需读取family功能是开启的)。
     /**
      * If the joined heap data gathering is interrupted due to scan limits, this will
      * contain the row for which we are populating the values.*/
@@ -4168,14 +4168,14 @@ public class HRegion implements HeapSize { // , Writable{
       // "true" if there's more data to read, "false" if there isn't (storeHeap is at a stop row,
       // and joinedHeap has no more data to read for the last row (if set, joinedContinuationRow).
       while (true) {
-        if (rpcCall != null) {
+        if (rpcCall != null) {//(1).检测client端是否超时.
           // If a user specifies a too-restrictive or too-slow scanner, the
           // client might time out and disconnect while the server side
           // is still processing the request. We should abort aggressively
           // in that case.
           rpcCall.throwExceptionIfCallerDisconnected();
         }
-
+        //.从存储堆storeHeap里获取当前keyvalue.
         // Let's see what we have in the storeHeap.
         KeyValue current = this.storeHeap.peek();
 
@@ -4201,7 +4201,7 @@ public class HRegion implements HeapSize { // , Writable{
             }
             return false;
           }
-
+          //检查rokey filter是否要过滤到当前行. 如果需要过滤当前行,
           // Check if rowkey filter wants to exclude this row. If so, loop to next.
           // Techically, if we hit limits before on this row, we don't need this call.
           if (filterRowKey(currentRow, offset, length)) {
@@ -4210,7 +4210,7 @@ public class HRegion implements HeapSize { // , Writable{
             if (!moreRows) return false;
             continue;
           }
-
+          //从storeHeap中取出currentRow描述的行
           // Ok, we are good, let's try to get some results from the main heap.
           KeyValue nextKv = populateResult(results, this.storeHeap, limit, currentRow, offset,
               length, metric);
@@ -4220,18 +4220,18 @@ public class HRegion implements HeapSize { // , Writable{
                 "Filter whose hasFilterRow() returns true is incompatible with scan with limit!");
             }
             return true; // We hit the limit.
-          }
+          }//判断是否要停止scan.
           stopRow = nextKv == null
               || isStopRow(nextKv.getBuffer(), nextKv.getRowOffset(), nextKv.getRowLength());
           // save that the row was empty before filters applied to it.
           final boolean isEmptyRow = results.isEmpty();
-
+          //我们有必要根据row的某部分进行过滤.
           // We have the part of the row necessary for filtering (all of it, usually).
           // First filter with the filterRow(List).            
           if (filter != null && filter.hasFilterRow()) {
             filter.filterRow(results);
           }
-
+          //
           if (isEmptyRow || filterRow()) {
             results.clear();
             boolean moreRows = nextRow(currentRow, offset, length);
@@ -4242,9 +4242,9 @@ public class HRegion implements HeapSize { // , Writable{
             if (!stopRow) continue;
             return false;
           }
-
-          // Ok, we are done with storeHeap for this row.
-          // Now we may need to fetch additional, non-essential data into row.
+          //.我们已经对storeHeap里的这行数据的处理；现在我们需要取一些额外的/非实质的数据到该行.这写数据对于filter工作是没有用的
+          // 所以我们推迟fetch这些数据，以减少从disk加载的数据量。
+          // Ok, we are done with storeHeap for this row.Now we may need to fetch additional, non-essential data into row.
           // These values are not needed for filter to work, so we postpone their
           // fetch to (possibly) reduce amount of data loads from disk.
           if (this.joinedHeap != null) {
