@@ -24,7 +24,7 @@ import org.apache.hadoop.hbase.KeyValue;
 
 import java.util.ArrayList;
 
-/**
+/**这个过滤器是基于column family做过滤的.
  * This filter is used to filter based on the column family. It takes an
  * operator (equal, greater, not equal, etc) and a byte [] comparator for the
  * column family portion of a key.
@@ -54,7 +54,7 @@ public class FamilyFilter extends CompareFilter {
                       final WritableByteArrayComparable familyComparator) {
       super(familyCompareOp, familyComparator);
   }
-
+  /**将当前kv的family和comparator进行比较,不满足则返回ReturnCode.SKIP,表示跳过该kv*/
   @Override
   public ReturnCode filterKeyValue(KeyValue v) {
     int familyLength = v.getFamilyLength();
@@ -66,7 +66,7 @@ public class FamilyFilter extends CompareFilter {
     }
     return ReturnCode.INCLUDE;
   }
-
+  /**根据参数创建familyFilter*/
   public static Filter createFilterFromArguments(ArrayList<byte []> filterArguments) {
     ArrayList arguments = CompareFilter.extractArguments(filterArguments);
     CompareOp compareOp = (CompareOp)arguments.get(0);
