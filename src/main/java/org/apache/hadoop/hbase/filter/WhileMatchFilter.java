@@ -22,12 +22,12 @@ package org.apache.hadoop.hbase.filter;
 
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.util.Classes;
-
 import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-/**
+/**只要所包装的filters的filterRowkey、filterKeyValue、filterRow、filterAllRemaining
+ * 中的一个方法返回true，其filterAllRemaining就返回true.
  * A wrapper filter that returns true from {@link #filterAllRemaining()} as soon
  * as the wrapped filters {@link Filter#filterRowKey(byte[], int, int)},
  * {@link Filter#filterKeyValue(org.apache.hadoop.hbase.KeyValue)},
@@ -62,7 +62,7 @@ public class WhileMatchFilter extends FilterBase {
   public boolean filterAllRemaining() {
     return this.filterAllRemaining || this.filter.filterAllRemaining();
   }
-
+  /***/
   public boolean filterRowKey(byte[] buffer, int offset, int length) {
     boolean value = filter.filterRowKey(buffer, offset, length);
     changeFAR(value);
