@@ -27,7 +27,7 @@ import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
-/**
+/**一个filter包装类. 如果人一个KeyValue不符合过滤检查,则整行数据将会被SKIP
  * A wrapper filter that filters an entire row if any of the KeyValue checks do
  * not pass.
  * <p>
