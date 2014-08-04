@@ -151,7 +151,7 @@ public interface Filter extends Writable {
    */
   public boolean hasFilterRow();
 
-  /**
+  /**这是在前面filterKeyValue(KeyValue)的基础上,过滤掉一行数据的最后一次机会.
    * Last chance to veto row based on previous {@link #filterKeyValue(KeyValue)}
    * calls. The filter needs to retain state then return a particular value for
    * this call if they wish to exclude a row if a certain column is missing
@@ -160,7 +160,7 @@ public interface Filter extends Writable {
    */
   public boolean filterRow();
 
-  /**
+  /**如果filter返回SEEK_NET_USING_HINT,它同样应该返回他必须要seek的下一个key.
    * If the filter returns the match code SEEK_NEXT_USING_HINT, then
    * it should also tell which is the next key it must seek to.
    * After receiving the match code SEEK_NEXT_USING_HINT, the QueryMatcher would
