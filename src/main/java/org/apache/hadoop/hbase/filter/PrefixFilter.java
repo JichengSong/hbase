@@ -30,7 +30,7 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 import com.google.common.base.Preconditions;
 
-/**
+/**根据row的前缀进行过滤的过滤器.
  * Pass results that have same row prefix.
  */
 public class PrefixFilter extends FilterBase {
