@@ -24,10 +24,10 @@ import org.apache.hadoop.hbase.KeyValue;
 import java.util.List;
 import java.util.ArrayList;
 
-/**
+/**一个用于帮助你实现新的Filter类的抽象类.
  * Abstract base class to help you implement new Filters.  Common "ignore" or NOOP type
- * methods can go here, helping to reduce boiler plate in an ever-expanding filter
- * library.
+ * methods can go here, helping to reduce boiler plate in an ever-expanding(不断扩展的) 
+ * filter library.
  *
  * If you could instantiate FilterBase, it would end up being a "null" filter -
  * that is one that never filters anything.
@@ -130,7 +130,7 @@ public abstract class FilterBase implements Filter {
     return null;
   }
 
-  /**
+  /**检查给定的column family在filter检查row时是否是必须的.
    * Check that given column family is essential for filter to check row.  Most
    * filters always return true here. But some could have more sophisticated
    * logic which could significantly reduce scanning process by not even
