@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.client.Scan;
 
-/**
+/**RowFilter根据key进行过滤.
  * This filter is used to filter based on the key. It takes an operator
  * (equal, greater, not equal, etc) and a byte [] comparator for the row,
  * and column qualifier portions of a key.
@@ -57,33 +57,33 @@ public class RowFilter extends CompareFilter {
       final WritableByteArrayComparable rowComparator) {
     super(rowCompareOp, rowComparator);
   }
-
+  
   @Override
   public void reset() {
     this.filterOutRow = false;
   }
-
+  /***/
   @Override
   public ReturnCode filterKeyValue(KeyValue v) {
-    if(this.filterOutRow) {
+    if(this.filterOutRow) {//如果filterOutRow为true,说明需要过滤掉该行,返回ReturnCode.NEXT_ROW
       return ReturnCode.NEXT_ROW;
     }
-    return ReturnCode.INCLUDE;
+    return ReturnCode.INCLUDE;//如果filterOutRow为false,说明不需要过滤该行,返回ReturnCode.INCLUDE
   }
 
   @Override
   public boolean filterRowKey(byte[] data, int offset, int length) {
     if(doCompare(this.compareOp, this.comparator, data, offset, length)) {
-      this.filterOutRow = true;
+      this.filterOutRow = true;//如果不满足比较条件,将filterOutRow置true,表示要过滤掉该行.
     }
-    return this.filterOutRow;
+    return this.filterOutRow;//返回filterOutRow,如果是true表示exclude该行,fase则include该行.
   }
-
+  
   @Override
   public boolean filterRow() {
     return this.filterOutRow;
   }
-
+  /**根据参数创建Filter*/
   public static Filter createFilterFromArguments(ArrayList<byte []> filterArguments) {
     ArrayList arguments = CompareFilter.extractArguments(filterArguments);
     CompareOp compareOp = (CompareOp)arguments.get(0);
