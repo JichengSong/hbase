@@ -99,6 +99,7 @@ public interface KeyValueScanner {
   public boolean requestSeek(KeyValue kv, boolean forward, boolean useBloom)
       throws IOException;
 
+  
   /**
    * We optimize our store scanners by checking the most recent store file
    * first, so we sometimes pretend we have done a seek but delay it until the
