@@ -25,7 +25,7 @@ import org.apache.hadoop.io.Writable;
 
 import java.util.List;
 
-/**
+/**Filter是一个直接作用于regionserver端的对行和列进行过滤的接口.
  * Interface for row and column filters directly applied within the regionserver.
  *
  * A filter can expect the following call sequence:
@@ -51,12 +51,12 @@ import java.util.List;
  * @see FilterBase
  */
 public interface Filter extends Writable {
-  /**
+  /**在对新的一行进行filter之前，重置filter.
    * Reset the state of the filter between rows.
    */
   public void reset();
 
-  /**
+  /**根据row key对一行数据进行过滤.
    * Filters a row based on the row key. If this returns true, the entire
    * row will be excluded.  If false, each KeyValue in the row will be
    * passed to {@link #filterKeyValue(KeyValue)} below.
@@ -68,19 +68,19 @@ public interface Filter extends Writable {
    */
   public boolean filterRowKey(byte [] buffer, int offset, int length);
 
-  /**
+  /**如果返回true,表明对该行的filter操作已经执行结束:true to end scan,false to continue。
    * If this returns true, the scan will terminate.
    *
    * @return true to end scan, false to continue.
    */
   public boolean filterAllRemaining();
 
-  /**
+  /**一种基于column family,column qualifier,以及/或value进行过滤的方法.
    * A way to filter based on the column family, column qualifier and/or the
    * column value. Return code is described below.  This allows filters to
    * filter only certain number of columns, then terminate without matching ever
    * column.
-   *
+   *如果filter返回了ReturnCode.NEXT_ROW,在调用reset()方法之前，该filterKeyValue方法将一直返回ReturnCode.NEXT_ROW.
    * If your filter returns <code>ReturnCode.NEXT_ROW</code>, it should return
    * <code>ReturnCode.NEXT_ROW</code> until {@link #reset()} is called
    * just in case the caller calls for the next row.
@@ -91,7 +91,7 @@ public interface Filter extends Writable {
    */
   public ReturnCode filterKeyValue(final KeyValue v);
 
-  /**
+  /**给filter一个改变传过来的KeyValue的机会. transformed KeyValue是最终返回给用户的KeyValue.
    * Give the filter a chance to transform the passed KeyValue.
    * If the KeyValue is changed a new KeyValue object must be returned.
    * @see org.apache.hadoop.hbase.KeyValue#shallowCopy()
@@ -106,7 +106,7 @@ public interface Filter extends Writable {
    */
   public KeyValue transform(final KeyValue v);
 
-  /**
+  /**filterValue方法的返回值码.
    * Return codes for filterValue().
    */
   public enum ReturnCode {
@@ -137,14 +137,14 @@ public interface Filter extends Writable {
     SEEK_NEXT_USING_HINT,
 }
 
-  /**
+  /**用于对一组将要提交的KeyValue进行更改.
    * Chance to alter the list of keyvalues to be submitted.
    * Modifications to the list will carry on
    * @param kvs the list of keyvalues to be filtered
    */
   public void filterRow(List<KeyValue> kvs);
 
-  /**
+  /**如果当前filter使用了filterRow(List)方法，则返回true.
    * @return True if this filter actively uses filterRow(List).
    * Primarily used to check for conflicts with scans(such as scans
    * that do not read a full row at a time)
