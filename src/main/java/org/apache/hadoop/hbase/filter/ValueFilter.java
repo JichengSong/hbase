@@ -24,7 +24,7 @@ import org.apache.hadoop.hbase.KeyValue;
 
 import java.util.ArrayList;
 
-/**
+/**基于value做过滤的过滤器.
  * This filter is used to filter based on column value. It takes an
  * operator (equal, greater, not equal, etc) and a byte [] comparator for the
  * cell value.
@@ -54,7 +54,7 @@ public class ValueFilter extends CompareFilter {
       final WritableByteArrayComparable valueComparator) {
     super(valueCompareOp, valueComparator);
   }
-
+  /**如果kv的value满足比较条件,则返回ReturnCode.INCLUDE,否则返回ReturnCode.SKIP*/
   @Override
   public ReturnCode filterKeyValue(KeyValue v) {
     if (doCompare(this.compareOp, this.comparator, v.getBuffer(),
