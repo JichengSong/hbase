@@ -97,7 +97,7 @@ public abstract class CompareFilter extends FilterBase {
   public WritableByteArrayComparable getComparator() {
     return comparator;
   }
-  /**进行比较*/
+  /**进行比较并返回比较结果:满足比较则返回false,不满足则返回true*/
   protected boolean doCompare(final CompareOp compareOp,
       final WritableByteArrayComparable comparator, final byte [] data,
       final int offset, final int length) {
