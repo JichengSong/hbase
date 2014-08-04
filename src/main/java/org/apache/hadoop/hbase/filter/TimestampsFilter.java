@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import org.apache.hadoop.hbase.KeyValue;
 import com.google.common.base.Preconditions;
 
-/**
+/**时间戳过滤器,只返回时间戳在给定的timestamp list里的keyvalue.
  * Filter that returns only cells whose timestamp (version) is
  * in the specified list of timestamps (versions).
  * <p>
