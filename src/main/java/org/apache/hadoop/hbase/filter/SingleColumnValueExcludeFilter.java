@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Iterator;
 
-/**
+/**和父类{@link SingleColumnValueFilter}相比，它的返回结果去除了filter测试列.
  * A {@link Filter} that checks a single column value, but does not emit the
  * tested column. This will enable a performance boost over
  * {@link SingleColumnValueFilter}, if the tested column value is not actually
@@ -82,7 +82,7 @@ public class SingleColumnValueExcludeFilter extends SingleColumnValueFilter {
   public boolean hasFilterRow() {
    return true;
   }
-
+  /**在这里将filter测试列的kv删除*/
   // Here we remove from row all key values from testing column
   public void filterRow(List<KeyValue> kvs) {
     Iterator it = kvs.iterator();
