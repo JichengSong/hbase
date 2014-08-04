@@ -37,31 +37,31 @@ import java.util.ArrayList;
 
 import com.google.common.base.Preconditions;
 
-/**
+/**这个过滤器根据指定字段的value过滤cell.
  * This filter is used to filter cells based on value. It takes a {@link CompareFilter.CompareOp}
  * operator (equal, greater, not equal, etc), and either a byte [] value or
  * a WritableByteArrayComparable.
- * <p>
+ * <p>(1).如果通过构造函数传递给的比较对象是byte[],我们之需要将cell的value与其做字典比较即可.
  * If we have a byte [] value then we just do a lexicographic compare. For
  * example, if passed value is 'b' and cell has 'a' and the compare operator
  * is LESS, then we will filter out this cell (return true).  If this is not
  * sufficient (eg you want to deserialize a long and then compare it to a fixed
  * long value), then you can pass in your own comparator instead.
- * <p>
+ * <p>(2).你同样需要指明family和qualifier. 只有这一字段的value才会被执行过滤操作.
  * You must also specify a family and qualifier.  Only the value of this column
  * will be tested. When using this filter on a {@link Scan} with specified
  * inputs, the column to be tested should also be added as input (otherwise
  * the filter will regard the column as missing).
- * <p>
+ * <p>(3).可以通过setFilterIfMissing设置当改行的该column不存在时是否过滤掉整个行.
  * To prevent the entire row from being emitted if the column is not found
  * on a row, use {@link #setFilterIfMissing}.
  * Otherwise, if the column is found, the entire row will be emitted only if
  * the value passes.  If the value fails, the row will be filtered out.
- * <p>
+ * <p>(4).如果需要对旧版本做filter操作,需要将setLatestVersionOnly设为false
  * In order to test values of previous versions (timestamps), set
  * {@link #setLatestVersionOnly} to false. The default is true, meaning that
  * only the latest version's value is tested and all previous versions are ignored.
- * <p>
+ * <p>(5).如果需要对所有列的value做filter操作,请使用ValueFilter
  * To filter based on the value of all scanned columns, use {@link ValueFilter}.
  */
 public class SingleColumnValueFilter extends FilterBase {
