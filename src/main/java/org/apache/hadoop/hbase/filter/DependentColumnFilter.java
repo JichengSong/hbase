@@ -33,7 +33,7 @@ import org.apache.hadoop.hbase.util.Bytes;
 
 import com.google.common.base.Preconditions;
 
-/**
+/**列依赖过滤器.增加了列内部时间俺戳匹配.只有cell和依赖列有相同的时间错时才会被检索/取出.
  * A filter for adding inter-column timestamp matching
  * Only cells with a correspondingly timestamped entry in
  * the target column will be retained
@@ -137,21 +137,21 @@ public class DependentColumnFilter extends CompareFilter {
     // Check if the column and qualifier match
   	if (!v.matchingColumn(this.columnFamily, this.columnQualifier)) {
         // include non-matches for the time being, they'll be discarded afterwards
-        return ReturnCode.INCLUDE;
+        return ReturnCode.INCLUDE;//1.如果kv不属于columnFaimly:columnQualifier列,则返回ReturnCode.INCLUDE
   	}
     // If it doesn't pass the op, skip it
     if (comparator != null
         && doCompare(compareOp, comparator, v.getBuffer(), v.getValueOffset(),
             v.getValueLength()))
-      return ReturnCode.SKIP;
-	
+      return ReturnCode.SKIP;//2.如果comparator不为null,且kv的value不满足比较条件,则返回ReturnCode.SKIP.
+							 //3.将当前kv的时间戳add到stampSet
     stampSet.add(v.getTimestamp());
-    if(dropDependentColumn) {
+    if(dropDependentColumn) {//4.如果dropDependentColumn为true,表示过滤掉当前keyvalue,返回ReturnCode.SKIP
     	return ReturnCode.SKIP;
     }
-    return ReturnCode.INCLUDE;
+    return ReturnCode.INCLUDE;//5.返回ReturnCode.INCLUDE
   }
-
+  /**如果kv的时间戳不在依赖列的时间戳集合stampSet里,将该kv从kvs中remove.*/
   @Override
   public void filterRow(List<KeyValue> kvs) {
     Iterator<KeyValue> it = kvs.iterator();
