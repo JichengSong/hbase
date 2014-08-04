@@ -29,7 +29,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.google.common.base.Preconditions;
-/**
+/**这是一个通用的可以通过比较来进行过滤的过滤器
  * This is a generic filter to be used to filter by comparison.  It takes an
  * operator (equal, greater, not equal, etc) and a byte [] comparator.
  * <p>
@@ -73,7 +73,7 @@ public abstract class CompareFilter extends FilterBase {
   public CompareFilter() {
   }
 
-  /**
+  /**CompareFilter构造函数，compareOp为比较操作符,comparator为比较器/比较者.
    * Constructor.
    * @param compareOp the compare op for row matching
    * @param comparator the comparator for row matching
@@ -97,7 +97,7 @@ public abstract class CompareFilter extends FilterBase {
   public WritableByteArrayComparable getComparator() {
     return comparator;
   }
-
+  /**进行比较*/
   protected boolean doCompare(final CompareOp compareOp,
       final WritableByteArrayComparable comparator, final byte [] data,
       final int offset, final int length) {
@@ -123,7 +123,7 @@ public abstract class CompareFilter extends FilterBase {
           compareOp.name());
     }
   }
-
+  /**从参数里抽取compareOp和comparator,放到一个list作为结果返回*/
   public static ArrayList extractArguments(ArrayList<byte []> filterArguments) {
     Preconditions.checkArgument(filterArguments.size() == 2,
                                 "Expected 2 but got: %s", filterArguments.size());
@@ -144,13 +144,13 @@ public abstract class CompareFilter extends FilterBase {
     arguments.add(comparator);
     return arguments;
   }
-
+  /**从数据输入流里读取compareOp和comparator对象*/
   public void readFields(DataInput in) throws IOException {
     compareOp = CompareOp.valueOf(in.readUTF());
     comparator = (WritableByteArrayComparable)
       HbaseObjectWritable.readObject(in, null);
   }
-
+  /**将compareOp和comparator写入流*/
   public void write(DataOutput out) throws IOException {
     out.writeUTF(compareOp.name());
     HbaseObjectWritable.writeObject(out, comparator,
