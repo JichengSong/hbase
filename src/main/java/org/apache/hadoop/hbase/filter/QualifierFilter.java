@@ -25,7 +25,7 @@ import org.apache.hadoop.hbase.client.Get;
 
 import java.util.ArrayList;
 
-/**
+/**基于列限定符(column qualifier)做过滤的过滤器.
  * This filter is used to filter based on the column qualifier. It takes an
  * operator (equal, greater, not equal, etc) and a byte [] comparator for the
  * column qualifier portion of a key.
@@ -55,7 +55,7 @@ public class QualifierFilter extends CompareFilter {
       final WritableByteArrayComparable qualifierComparator) {
     super(op, qualifierComparator);
   }
-
+  /**根据kv的qualifier是否满足比较条件，以返回ReturnCode.INCLUDE或Return.SKIP*/
   @Override
   public ReturnCode filterKeyValue(KeyValue v) {
     int qualifierLength = v.getQualifierLength();
@@ -67,7 +67,7 @@ public class QualifierFilter extends CompareFilter {
     }
     return ReturnCode.INCLUDE;
   }
-
+ 
   public static Filter createFilterFromArguments(ArrayList<byte []> filterArguments) {
     ArrayList arguments = CompareFilter.extractArguments(filterArguments);
     CompareOp compareOp = (CompareOp)arguments.get(0);
