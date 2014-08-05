@@ -27,7 +27,7 @@ import java.util.Random;
 
 import org.apache.hadoop.hbase.KeyValue;
 
-/**
+/**是否过滤掉一行具有随机性.
  * A filter that includes rows based on a chance.
  * 
  */
@@ -43,7 +43,7 @@ public class RandomRowFilter extends FilterBase {
   public RandomRowFilter() {
   }
 
-  /**
+  /**如果chance》1则返回一行的概率为1,如果chance<=0,返回概率为0.
    * Create a new filter with a specified chance for a row to be included.
    * 
    * @param chance
@@ -85,7 +85,7 @@ public class RandomRowFilter extends FilterBase {
   public boolean filterRow() {
     return filterOutRow;
   }
-
+  
   @Override
   public boolean filterRowKey(byte[] buffer, int offset, int length) {
     if (chance < 0) {
