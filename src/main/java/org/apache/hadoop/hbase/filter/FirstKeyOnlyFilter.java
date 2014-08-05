@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 import com.google.common.base.Preconditions;
 
-/**
+/**FirstKeyOnlyFilter 只从一行里返回第一个KV
  * A filter that will only return the first KV from each row.
  * <p>
  * This filter can be used to more efficiently perform row count operations.
@@ -45,9 +45,9 @@ public class FirstKeyOnlyFilter extends FilterBase {
   }
 
   public ReturnCode filterKeyValue(KeyValue v) {
-    if(foundKV) return ReturnCode.NEXT_ROW;
+    if(foundKV) return ReturnCode.NEXT_ROW;//如果已经找到一条KV了,返回ReturnCode.NEXT_ROW
     foundKV = true;
-    return ReturnCode.INCLUDE;
+    return ReturnCode.INCLUDE;			   //如果刚查找到第一条KV,返回ReturnCode.INCLUDE
   }
 
   public static Filter createFilterFromArguments(ArrayList<byte []> filterArguments) {
