@@ -29,7 +29,7 @@ import java.util.List;
  * Interface for row and column filters directly applied within the regionserver.
  *
  * A filter can expect the following call sequence:
- * <ul>
+ * <ul>调用顺序:reset()->filterAllRemaining()->filterRowKey()->filterKeyValue()->filterRow(List)->filterRow()
  *   <li> {@link #reset()} : reset the filter state before filtering a new row. </li>
  *   <li> {@link #filterAllRemaining()}: true means row scan is over; false means keep going. </li>
  *   <li> {@link #filterRowKey(byte[],int,int)}: true means drop this row; false means include.</li>
