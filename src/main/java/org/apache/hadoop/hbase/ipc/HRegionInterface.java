@@ -53,7 +53,7 @@ import org.apache.hadoop.hbase.util.Pair;
 import org.apache.hadoop.ipc.RemoteException;
 import org.apache.hadoop.hbase.ipc.VersionedProtocol;
 
-/**
+/**Client通过一个HRegionInterface句柄和HRegionServers进行交互.(它描述的是客户端HRegionServer代理拥有的方法)
  * Clients interact with HRegionServers using a handle to the HRegionInterface.
  *
  * <p>NOTE: if you change the interface, you must change the RPC version
@@ -72,8 +72,8 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   // had changed.  This has since been undone.
   public static final long VERSION = 29L;
 
-  /**
-   * Get metainfo about an HRegion
+  /**获取HRegion的meta信息
+   * Get meta info about an HRegion
    *
    * @param regionName name of the region
    * @return HRegionInfo object for region
@@ -84,14 +84,14 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public HRegionInfo getRegionInfo(final byte [] regionName)
   throws NotServingRegionException, ConnectException, IOException;
 
-  /**
+  /**flush给定的region
    * Flush the given region
    * @param region name
    */
   public void flushRegion(byte[] regionName)
     throws IllegalArgumentException, IOException;
 
-  /**
+  /**如果lastFlushTime<ifOlderThanTs,flush 给定的region.
    * Flush the given region if lastFlushTime < ifOlderThanTS
    * @param region name
    * @param timestamp
@@ -105,7 +105,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
    */
   public long getLastFlushTime(byte[] regionName);
 
-  /**
+  /**获取一个region给定列族的store file列表.
    * Get a list of store files for a particular CF in a particular region
    * @param region name
    * @param CF name
@@ -114,7 +114,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public List<String> getStoreFileList(byte[] regionName, byte[] columnFamily)
     throws IllegalArgumentException;
 
-  /**
+  /**获取一个region一组列族的store file列表.
    * Get a list of store files for a set of CFs in a particular region
    * @param region name
    * @param CF names
@@ -123,7 +123,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public List<String> getStoreFileList(byte[] regionName, byte[][] columnFamilies)
     throws IllegalArgumentException;
 
-  /**
+  /**获取一个region所有列族的store file列表.
    * Get a list of store files for all CFs in a particular region
    * @param region name
    * @return the list of store files
@@ -131,7 +131,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public List<String> getStoreFileList(byte[] regionName)
     throws IllegalArgumentException;
 
-  /**
+  /**返回给定的row所在行的所有数据.(如果row不存在,返回row之前那一行的所有数据)
    * Return all the data for the row that matches <i>row</i> exactly,
    * or the one that immediately preceeds it.
    *
@@ -145,7 +145,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
     final byte [] row, final byte [] family)
   throws IOException;
 
-  /**
+  /**执行get操作
    * Perform Get operation.
    * @param regionName name of region to get from
    * @param get Get operation
@@ -154,7 +154,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
    */
   public Result get(byte [] regionName, Get get) throws IOException;
 
-  /**
+  /**执行exists操作.
    * Perform exists operation.
    * @param regionName name of region to get from
    * @param get Get operation describing cell to test
@@ -163,7 +163,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
    */
   public boolean exists(byte [] regionName, Get get) throws IOException;
 
-  /**
+  /**执行put操作.
    * Put data into the specified region
    * @param regionName region name
    * @param put the data to be put
@@ -172,7 +172,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public void put(final byte [] regionName, final Put put)
   throws IOException;
 
-  /**
+  /**执行一组put操作.
    * Put an array of puts into the specified region
    *
    * @param regionName region name
@@ -184,7 +184,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public int put(final byte[] regionName, final List<Put> puts)
   throws IOException;
 
-  /**
+  /**执行delete操作
    * Deletes all the KeyValues that match those found in the Delete object,
    * if their ts <= to the Delete. In case of a delete with a specific ts it
    * only deletes that specific KeyValue.
@@ -195,7 +195,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public void delete(final byte[] regionName, final Delete delete)
   throws IOException;
 
-  /**
+  /**执行一组delete操作.
    * Put an array of deletes into the specified region
    *
    * @param regionName region name
@@ -207,7 +207,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public int delete(final byte[] regionName, final List<Delete> deletes)
   throws IOException;
 
-  /**
+  /**原子性检查指定key的value是否和给定的value相同,如果检查通过则执行put,否则不执行put.
    * Atomically checks if a row/family/qualifier value match the expectedValue.
    * If it does, it adds the put. If passed expected value is null, then the
    * check is for non-existance of the row/column.
@@ -227,7 +227,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   throws IOException;
 
 
-  /**
+  /**原子性检查指定key的value是否和给定的value相同,如果检查通过则执行delete,否则不执行delete.
    * Atomically checks if a row/family/qualifier value match the expectedValue.
    * If it does, it adds the delete. If passed expected value is null, then the
    * check is for non-existance of the row/column.
