@@ -60,7 +60,7 @@ public abstract class ServerCallable<T> implements Callable<T> {
   protected int callTimeout;			 //响应超时时间
   protected long globalStartTime;		 //global start time
   protected long startTime, endTime;	 // start ,end time.
-  protected final static int MIN_RPC_TIMEOUT = 2000;//RPC超时时间?
+  protected final static int MIN_RPC_TIMEOUT = 2000;//最小RPC超时时间
 
   /**ServerCallable构造函数.connection是远程调用要用到的连接.
    * @param connection Connection to use.
