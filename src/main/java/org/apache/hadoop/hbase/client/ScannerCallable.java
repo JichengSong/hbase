@@ -35,23 +35,23 @@ import org.apache.hadoop.hbase.regionserver.RegionServerStoppedException;
 import org.apache.hadoop.ipc.RemoteException;
 import org.apache.hadoop.net.DNS;
 
-/**
+/**该类可以重试scanner的操作,如create,next等. 被HTable生成的ResultScanner使用.
  * Retries scanner operations such as create, next, etc.
  * Used by {@link ResultScanner}s made by {@link HTable}.
  */
 public class ScannerCallable extends ServerCallable<Result[]> {
-  public static final String LOG_SCANNER_LATENCY_CUTOFF
+  public static final String LOG_SCANNER_LATENCY_CUTOFF	//日志(截断)延迟时间
     = "hbase.client.log.scanner.latency.cutoff";
   public static final String LOG_SCANNER_ACTIVITY = "hbase.client.log.scanner.activity";
   private static final Log LOG = LogFactory.getLog(ScannerCallable.class);
-  private long scannerId = -1L;
-  private boolean instantiated = false;
-  private boolean closed = false;
-  private Scan scan;
+  private long scannerId = -1L;				//scannerId,HRegionServer用其标志一个scanner
+  private boolean instantiated = false;		//connection是否已经实例化.
+  private boolean closed = false;			//该ScannerCallable是否已经被close
+  private Scan scan;						//
   private int caching = 1;
   private ScanMetrics scanMetrics;
-  private boolean logScannerActivity = false;
-  private int logCutOffLatency = 1000;
+  private boolean logScannerActivity = false;//是否记录scanner的活动日志
+  private int logCutOffLatency = 1000;	     //日志延迟时间
   private static String myAddress;
   static {
     try {
@@ -81,7 +81,7 @@ public class ScannerCallable extends ServerCallable<Result[]> {
     logCutOffLatency = conf.getInt(LOG_SCANNER_LATENCY_CUTOFF, 1000);
   }
 
-  /**
+  /**重写ServerCallable.connect(boolean)方法,withoutRetries()和withRetries()方法都会用到该方法
    * @param reload force reload of server location
    * @throws IOException
    */
@@ -92,7 +92,7 @@ public class ScannerCallable extends ServerCallable<Result[]> {
       checkIfRegionServerIsRemote();
       instantiated = true;
     }
-
+    // 检查retry的间隔时间，需要进行retry时，HConnectionManager将会将reload参数置true以请求实例化connection
     // check how often we retry.
     // HConnectionManager will call instantiateServer with reload==true
     // if and only if for retries.
@@ -104,7 +104,7 @@ public class ScannerCallable extends ServerCallable<Result[]> {
     }
   }
 
-  /**
+  /**检查RegionServer是否远程server
    * compare the local machine hostname with region server's hostname
    * to decide if hbase client connects to a remote region server
    */
@@ -116,7 +116,7 @@ public class ScannerCallable extends ServerCallable<Result[]> {
     }
   }
 
-  /**
+  /**这部分是重点,ClientScanner封装的ScannerCallable对象进行next()等操作时，要通过call()方法向region server发起远程调用
    * @see java.util.concurrent.Callable#call()
    */
   public Result [] call() throws IOException {
