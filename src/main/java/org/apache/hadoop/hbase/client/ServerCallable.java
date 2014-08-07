@@ -40,7 +40,7 @@ import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.EnvironmentEdgeManager;
 import org.apache.hadoop.ipc.RemoteException;
 
-/**
+/**一个实现java.util.concurrent.Callable<V>接口的抽象类,规定我们调用远程服务器时的方法和返回类型.
  * Abstract class that implements {@link Callable}.  Implementation stipulates
  * return type and method we actually invoke on remote Server.  Usually
  * used inside a try/catch that fields usual connection failures all wrapped
@@ -62,7 +62,7 @@ public abstract class ServerCallable<T> implements Callable<T> {
   protected long startTime, endTime;
   protected final static int MIN_RPC_TIMEOUT = 2000;
 
-  /**
+  /**ServerCallable构造函数.connection是远程调用要用到的连接.
    * @param connection Connection to use.
    * @param tableName Table name to which <code>row</code> belongs.
    * @param row The row we want in <code>tableName</code>.
