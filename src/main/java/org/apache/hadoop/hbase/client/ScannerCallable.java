@@ -120,17 +120,17 @@ public class ScannerCallable extends ServerCallable<Result[]> {
    * @see java.util.concurrent.Callable#call()
    */
   public Result [] call() throws IOException {
-    if (scannerId != -1L && closed) {
+    if (scannerId != -1L && closed) {		 //1.如果该ScannerCallable的close标识为true，且scannerId已经被初始化，则关闭scanner。
       close();
-    } else if (scannerId == -1L && !closed) {//1.获取scannerId,openScanner()方法将在RegionServer端初始化scanner.并为该scanner分配一个id
-      this.scannerId = openScanner();		 //参HRegion.getScanner(Scan scan, List<KeyValueScanner> additionalScanners)
-    } else {
+    } else if (scannerId == -1L && !closed) {//2.如果ScannerCallable的close标识为false,且scannerId未被初始化，则打开scanner,初始化scannerId.
+      this.scannerId = openScanner();		 //  oepnScanner将向regionserver发起rpc请求，在server端打开一个scanner.参HRegion.getScanner
+    } else {								 //3.scannser已经被打开,且未关闭
       Result [] rrs = null;
       try {
-        incRPCcallsMetrics();
+        incRPCcallsMetrics();//inc metrics
         long timestamp = System.currentTimeMillis();
-        rrs = server.next(scannerId, caching);//2.向HRegionServer发起rpc请求:获取scannerId描述的scanner的下一行内容(Result).
-        if (logScannerActivity) {
+        rrs = server.next(scannerId, caching);//(3.1).向HRegionServer发起rpc请求:获取scannerId描述的scanner的下一行内容(Result).
+        if (logScannerActivity) { //如果开启了scanner活动日志,写log.
           long now = System.currentTimeMillis();
           if (now - timestamp > logCutOffLatency) {
             int rows = rrs == null ? 0 : rrs.length;
@@ -138,8 +138,8 @@ public class ScannerCallable extends ServerCallable<Result[]> {
               + rows + " rows from scanner=" + scannerId);
           }
         }
-        updateResultsMetrics(rrs);
-      } catch (IOException e) {
+        updateResultsMetrics(rrs);//update mectirc result.
+      } catch (IOException e) {	  //各种异常处理
         if (logScannerActivity) {
           LOG.info("Got exception in fetching from scanner="
             + scannerId, e);
@@ -178,7 +178,7 @@ public class ScannerCallable extends ServerCallable<Result[]> {
           throw ioe;
         }
       }
-      return rrs;
+      return rrs;				//(3.2)返回结果
     }
     return null;
   }
