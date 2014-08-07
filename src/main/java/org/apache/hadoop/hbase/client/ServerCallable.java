@@ -52,15 +52,15 @@ import org.apache.hadoop.ipc.RemoteException;
  * @param <T> the class that the ServerCallable handles
  */
 public abstract class ServerCallable<T> implements Callable<T> {
-  protected final HConnection connection;
-  protected final byte [] tableName;
-  protected final byte [] row;
-  protected HRegionLocation location;
-  protected HRegionInterface server;
-  protected int callTimeout;
-  protected long globalStartTime;
-  protected long startTime, endTime;
-  protected final static int MIN_RPC_TIMEOUT = 2000;
+  protected final HConnection connection;//连接
+  protected final byte [] tableName;	 //表名
+  protected final byte [] row;			 //row
+  protected HRegionLocation location;	 //hregion 位置
+  protected HRegionInterface server;	 //region server
+  protected int callTimeout;			 //响应超时时间
+  protected long globalStartTime;		 //global start time
+  protected long startTime, endTime;	 // start ,end time.
+  protected final static int MIN_RPC_TIMEOUT = 2000;//RPC超时时间?
 
   /**ServerCallable构造函数.connection是远程调用要用到的连接.
    * @param connection Connection to use.
@@ -78,7 +78,7 @@ public abstract class ServerCallable<T> implements Callable<T> {
     this.callTimeout = callTimeout;
   }
 
-  /**
+  /**连接持有给定的row所在region的region server; reload表示是否要重新查找region.
    * Connect to the server hosting region with row from tablename.
    * @param reload Set this to true if connection should re-find the region
    * @throws IOException e
@@ -111,7 +111,7 @@ public abstract class ServerCallable<T> implements Callable<T> {
   public byte [] getRow() {
     return row;
   }
-
+  /**如果remaining大于MIN_RPC_TIMEOUT,则将RpcTimeout设置为remaining,否则设置为MIN_RPC_TIMEOUT*/
   public void beforeCall() {
     this.startTime = EnvironmentEdgeManager.currentTimeMillis();
     int remaining = (int)(callTimeout - (this.startTime - this.globalStartTime));
