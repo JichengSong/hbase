@@ -45,7 +45,7 @@ import org.apache.hadoop.hbase.zookeeper.RootRegionTracker;
 import org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher;
 import org.apache.hadoop.ipc.RemoteException;
 
-/**
+/**跟踪"目录表"(-ROOT-和.META.表)的可用性
  * Tracks the availability of the catalog tables <code>-ROOT-</code> and
  * <code>.META.</code>.
  * 

@@ -176,7 +176,7 @@ public class SoftValueSortedMap<K,V> implements SortedMap<K,V> {
     }
   }
 
-  /*
+  /* 检索所有key中小于给定key的最大key 对应value；如果没有小于给定的key的key,返回null
    * retrieves the value associated with the greatest key strictly less than
    *  the given key, or null if there is no such key
    * @param key the key we're interested in

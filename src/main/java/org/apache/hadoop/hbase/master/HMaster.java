@@ -673,7 +673,7 @@ Server {
     // Fixing up missing daughters if any
     status.setStatus("Fixing up missing daughters");
     fixupDaughters(status);
-
+    
     if (!masterRecovery) {
       // Start balancer and meta catalog janitor after meta and regions have
       // been assigned.

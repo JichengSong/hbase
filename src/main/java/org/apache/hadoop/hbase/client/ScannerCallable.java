@@ -218,7 +218,7 @@ public class ScannerCallable extends ServerCallable<Result[]> {
     }
     this.scannerId = -1L;
   }
-
+  /**打开scanner**/
   protected long openScanner() throws IOException {
     incRPCcallsMetrics();
     long id = this.server.openScanner(this.location.getRegionInfo().getRegionName(),

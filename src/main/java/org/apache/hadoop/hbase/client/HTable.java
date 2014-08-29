@@ -131,9 +131,9 @@ public class HTable implements HTableInterface {
 
 
   /**
-   * Creates an object to access a HBase table.
+   * Creates an object to access a HBase table.和利用同一个conf创建的HTable实例共享zk连接等资源.
    * Shares zookeeper connection and other resources with other HTable instances
-   * created with the same <code>conf</code> instance.  Uses already-populated
+   * created with the same <code>conf</code> instance.  Uses already-populated(已填充的)
    * region cache if one is available, populated by any other HTable instances
    * sharing this <code>conf</code> instance.  Recommended.
    * @param conf Configuration object to use.
@@ -144,10 +144,10 @@ public class HTable implements HTableInterface {
   throws IOException {
     this.tableName = tableName;
     this.cleanupPoolOnClose = this.cleanupConnectionOnClose = true;
-    if (conf == null) {
+    if (conf == null) {//
       this.connection = null;
       return;
-    }
+    }//从HConnectionManager里获取conf对应的connection. 
     this.connection = HConnectionManager.getConnection(conf);
     this.configuration = conf;
 
@@ -243,12 +243,12 @@ public class HTable implements HTableInterface {
     this.finishSetup();
   }
 
-  /**
+  /**根据conf对HTable的参数进行配置.
    * setup this HTable's parameter based on the passed configuration
    * @param conf
    */
   private void finishSetup() throws IOException {
-    this.connection.locateRegion(tableName, HConstants.EMPTY_START_ROW);
+    this.connection.locateRegion(tableName, HConstants.EMPTY_START_ROW);//查找tableName表中空行"EMPTY_START_ROW"所在的region.
     this.operationTimeout = HTableDescriptor.isMetaTable(tableName) ? HConstants.DEFAULT_HBASE_CLIENT_OPERATION_TIMEOUT
         : this.configuration.getInt(HConstants.HBASE_CLIENT_OPERATION_TIMEOUT,
             HConstants.DEFAULT_HBASE_CLIENT_OPERATION_TIMEOUT);

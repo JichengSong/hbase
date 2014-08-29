@@ -246,7 +246,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
       final Delete delete)
   throws IOException;
 
-  /**
+  /**原子性增加一列的值
    * Atomically increments a column value. If the column value isn't long-like,
    * this could throw an exception. If passed expected value is null, then the
    * check is for non-existance of the row/column.
@@ -263,7 +263,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public long incrementColumnValue(byte [] regionName, byte [] row,
       byte [] family, byte [] qualifier, long amount, boolean writeToWAL)
   throws IOException;
-
+  /**原子性地在一行上进行行改变(RowMutation,目前有put和delete)操作*/
   public void mutateRow(byte[] regionName, RowMutations rm)
       throws IOException;
 
@@ -280,7 +280,7 @@ public interface HRegionInterface extends VersionedProtocol, Stoppable, Abortabl
   public Result append(byte[] regionName, Append append)
   throws IOException;
 
-  /**
+  /**在一行上增加多个列的value
    * Increments one or more columns values in a row.  Returns the
    * updated keys after the increment.
    * <p>

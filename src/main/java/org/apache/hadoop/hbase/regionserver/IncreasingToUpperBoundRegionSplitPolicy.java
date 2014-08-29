@@ -86,7 +86,7 @@ extends ConstantSizeRegionSplitPolicy {
         foundABigStore = true;
       }
     }
-    //4.返回foundABigStore
+    //4.返回
     return foundABigStore;
   }
 

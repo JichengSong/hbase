@@ -87,7 +87,7 @@ import org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher;
 import org.apache.hadoop.ipc.RemoteException;
 import org.apache.zookeeper.KeeperException;
 
-/**
+/**一个不可实例化的类,管理创建HConnection的工作.
  * A non-instantiable class that manages creation of {@link HConnection}s.
  * <p>The simplest way to use this class is by using {@link #createConnection(Configuration)}.
  * This creates a new {@link HConnection} that is managed by the caller.
@@ -705,11 +705,11 @@ public class HConnectionManager {
         }
       }
     }
-
+    /**initialize zookeeper and master address manager, rpcEngine...*/
     private synchronized void ensureZookeeperTrackers()
         throws ZooKeeperConnectionException {
       // initialize zookeeper and master address manager
-      if (zooKeeper == null) {
+      if (zooKeeper == null) {			//初始化zookeeper连接
         zooKeeper = getZooKeeperWatcher();
       }
       if (clusterId == null) {
@@ -718,16 +718,16 @@ public class HConnectionManager {
           conf.set(HConstants.CLUSTER_ID, clusterId.getId());
         }
       }
-      if (masterAddressTracker == null) {
+      if (masterAddressTracker == null) {//初始化masterAddressTracker
         masterAddressTracker = new MasterAddressTracker(zooKeeper, this);
         masterAddressTracker.start();
       }
-      if (rootRegionTracker == null) {
+      if (rootRegionTracker == null) {	//初始化rootRegionTracker
         rootRegionTracker = new RootRegionTracker(zooKeeper, this);
         rootRegionTracker.start();
       }
       // RpcEngine needs access to zookeeper data, like cluster ID
-      if (rpcEngine == null) {
+      if (rpcEngine == null) {			//初始化rpc Engine
         this.rpcEngine = HBaseRPC.getProtocolEngine(conf);
       }
     }
@@ -980,13 +980,13 @@ public class HConnectionManager {
         throw new IllegalArgumentException(
             "table name cannot be null or zero length");
       }
-      ensureZookeeperTrackers();
+      ensureZookeeperTrackers();//确认(初始化)zookeeper connection和watcher,(启动)MasterAddressTracker、RootRegionTracker，rpcEngine
       if (Bytes.equals(tableName, HConstants.ROOT_TABLE_NAME)) {	//1.如果tableName是-ROOT-表,获取-ROOT-所在region
-        try {
+        try {//(1.1)从rootRegionTracker获取RootRegion的位置.(因为-ROOT-表只有一个Region,这个Region的位置写在zookeeper节点里了）
           ServerName servername = this.rootRegionTracker.waitRootRegionLocation(this.rpcTimeout);
           LOG.debug("Looked up root region location, connection=" + this +
             "; serverName=" + ((servername == null)? "": servername.toString()));
-          if (servername == null) return null;
+          if (servername == null) return null;//(1.2) 根据serverName和HRegionInfo.ROOT_REGIONINFO创建HRegionLocation，return
           return new HRegionLocation(HRegionInfo.ROOT_REGIONINFO,
             servername.getHostname(), servername.getPort());
         } catch (InterruptedException e) {
@@ -1003,7 +1003,7 @@ public class HConnectionManager {
       }
     }
 
-    /*
+    /**
      * Search .META. for the HRegionLocation info that contains the table and
      * row we're seeking. It will prefetch certain number of regions info and
      * save them to the global region cache.
@@ -1063,7 +1063,7 @@ public class HConnectionManager {
       }
     }
 
-    /*  
+    /**  从meta表(-ROOT-或.META.)查找给定的table和row所对应的HRegionLocation
       * Search one of the meta tables (-ROOT- or .META.) for the HRegionLocation
       * info that contains the table and row we're seeking.
       */
@@ -1074,38 +1074,38 @@ public class HConnectionManager {
       HRegionLocation location;
       // If we are supposed to be using the cache, look in the cache to see if
       // we already have the region.
-      if (useCache) {//1.该region是否已经被cache
+      if (useCache) {//该region是否已经被cache
         location = getCachedLocation(tableName, row);
-        if (location != null) {
+        if (location != null) {//如果cache命中,直接返回
           return location;
         }
-      }
-      //2.生成一个临时regionName作为metaKey
+      }//cache未命中:
+      //								  1.根据tableName和row、HConstats.NINE生成regionName,作为metaKey
       int localNumRetries = retry ? numRetries : 1;
       // build the key of the meta region we should be looking for.
       // the extra 9's on the end are necessary to allow "exact" matches
       // without knowing the precise region names.
       byte [] metaKey = HRegionInfo.createRegionName(tableName, row,
         HConstants.NINES, false);
-      for (int tries = 0; true; tries++) {//3.根据metaKey找到相应的region
+      for (int tries = 0; true; tries++) {//2.根据metaKey找到相应的region (尝试tries次)
         if (tries >= localNumRetries) {
           throw new NoServerForRegionException("Unable to find region for "
             + Bytes.toStringBinary(row) + " after " + numRetries + " tries.");
         }
-
+      
         HRegionLocation metaLocation = null;
-        try {
+        try {//(2.1) 从parentTable查找给定的regionName (metaKey)
           // locate the root or meta region;这里的parentTable可能是-ROOT-表或.META.表
-          metaLocation = locateRegion(parentTable, metaKey, true, false);
+          metaLocation = locateRegion(parentTable, metaKey, true, false);//继续调用locateRegion
           // If null still, go around again.
           if (metaLocation == null) continue;
+          //(2.2) 和metaLocation描述的region server建立连接
           HRegionInterface server =
             getHRegionConnection(metaLocation.getHostname(), metaLocation.getPort());
-
           Result regionInfoRow = null;
-          if (useCache) {
+          if (useCache) {//(2.3)使用cache,命中则在2.3 return 结果.
             if (Bytes.equals(parentTable, HConstants.META_TABLE_NAME)
-                && (getRegionCachePrefetch(tableName))) {
+                && (getRegionCachePrefetch(tableName))) {//(1).
               // This block guards against two threads trying to load the meta
               // region at the same time. The first will load the meta region and
               // the second will use the value that the first one found.
@@ -1129,8 +1129,8 @@ public class HConnectionManager {
             // If we are not supposed to be using the cache, delete any existing cached location
             // so it won't interfere.
             deleteCachedLocation(tableName, row);
-          }
-
+          }//
+          //(2.4)cache未命中,则向(meta或root所在的)server发起rpc请求,查找指定region的RegionLocation
           // Query the root or meta region for the location of the meta region
           regionInfoRow = server.getClosestRowBefore(
           metaLocation.getRegionInfo().getRegionName(), metaKey,
@@ -1143,28 +1143,28 @@ public class HConnectionManager {
           if (value == null || value.length == 0) {
             throw new IOException("HRegionInfo was null or empty in " +
               Bytes.toString(parentTable) + ", row=" + regionInfoRow);
-          }
+          }//(2.5)将rpc请求的结果封装成regionInfo,进行判断(是否offline,split等)
           // convert the row result into the HRegionLocation we need!
           HRegionInfo regionInfo = (HRegionInfo) Writables.getWritable(
               value, new HRegionInfo());
           // possible we got a region of a different table...
-          if (!Bytes.equals(regionInfo.getTableName(), tableName)) {
+          if (!Bytes.equals(regionInfo.getTableName(), tableName)) {//查找到的regionInfo属于其他表的,说明要查的表不存在.
             throw new TableNotFoundException(
                   "Table '" + Bytes.toString(tableName) + "' was not found, got: " +
                   Bytes.toString(regionInfo.getTableName()) + ".");
           }
-          if (regionInfo.isSplit()) {
+          if (regionInfo.isSplit()) {//如果这个region刚发生split,(子split还未上线),则抛出异常
             throw new RegionOfflineException("the only available region for" +
               " the required row is a split parent," +
               " the daughters should be online soon: " +
               regionInfo.getRegionNameAsString());
           }
-          if (regionInfo.isOffline()) {
+          if (regionInfo.isOffline()) {//这个region已经下线了(可能table被disable了),则抛出异常.
             throw new RegionOfflineException("the region is offline, could" +
               " be caused by a disable table call: " +
               regionInfo.getRegionNameAsString());
           }
-
+          //(2.6.1)获取info:server字段的value.
           value = regionInfoRow.getValue(HConstants.CATALOG_FAMILY,
               HConstants.SERVER_QUALIFIER);
           String hostAndPort = "";
@@ -1177,7 +1177,7 @@ public class HConnectionManager {
               regionInfo.getRegionNameAsString() + " containing row " +
               Bytes.toStringBinary(row));
           }
-
+          //(2.6.2)根据info:server的value解析出
           // Instantiate the location
           String hostname = Addressing.parseHostname(hostAndPort);
           int port = Addressing.parsePort(hostAndPort);
@@ -1244,10 +1244,10 @@ public class HConnectionManager {
       }
 
       HRegionLocation possibleRegion = tableLocations.get(row);
-      if (possibleRegion != null) {
+      if (possibleRegion != null) {//缓存命中
         return possibleRegion;
       }
-
+      //						  //未命中时，找出最接近的/最可能的possibleRegion
       possibleRegion = tableLocations.lowerValueByKey(row);
       if (possibleRegion == null) {
         return null;
@@ -1351,14 +1351,14 @@ public class HConnectionManager {
       }
     }
 
-    /*
+    /**
      * @param tableName
      * @return Map of cached locations for passed <code>tableName</code>
      */
     private SoftValueSortedMap<byte [], HRegionLocation> getTableLocations(
         final byte [] tableName) {
       // find the map of cached locations for this table
-      Integer key = Bytes.mapKey(tableName);
+      Integer key = Bytes.mapKey(tableName); 
       SoftValueSortedMap<byte [], HRegionLocation> result;
       synchronized (this.cachedRegionLocations) {
         result = this.cachedRegionLocations.get(key);
@@ -1501,7 +1501,7 @@ public class HConnectionManager {
         try {
           if (this.closed) {
             throw new IOException(toString() + " closed");
-          }
+          }//创建zookeeper watcher (实例化zookeeper connection和watcher)
           this.zooKeeper = new ZooKeeperWatcher(conf, "hconnection", this);
         } catch(ZooKeeperConnectionException zce) {
           throw zce;
@@ -1665,13 +1665,13 @@ public class HConnectionManager {
           long sleepTime = ConnectionUtils.getPauseTime(this.pause, tries);
           LOG.debug("Retry " +tries+ ", sleep for " +sleepTime+ "ms!");
           Thread.sleep(sleepTime);
-        }
+        }//1.第一步 
         // step 1: break up into regionserver-sized chunks and build the data structs
         Map<HRegionLocation, MultiAction<R>> actionsByServer =
           new HashMap<HRegionLocation, MultiAction<R>>();
         for (int i = 0; i < workingList.size(); i++) {
           Row row = workingList.get(i);
-          if (row != null) {
+          if (row != null) {//获取响应本次操作的regionserver
             HRegionLocation loc = locateRegion(tableName, row.getRow());
             byte[] regionName = loc.getRegionInfo().getRegionName();
 

@@ -2681,7 +2681,7 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
         }
       }
       //(4).调用regionscanner s的netRaw()方法,获取nbRows条数据.
-      MultiVersionConsistencyControl.setThreadReadPoint(s.getMvccReadPoint());
+      MultiVersionConsistencyControl.setThreadReadPoint(s.getMvccReadPoint());//多版本一致性
       region.startRegionOperation();
       try {
         int i = 0;

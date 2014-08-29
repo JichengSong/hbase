@@ -115,7 +115,7 @@ public class ZooKeeperWatcher implements Watcher, Abortable {
 
   private final Exception constructorCaller;
 
-  /**
+  /**实例化一个zookeeper connection和watcher
    * Instantiate a ZooKeeper connection and watcher.
    * @param descriptor Descriptive string that is added to zookeeper sessionid
    * and used as identifier for this instance.
@@ -126,7 +126,7 @@ public class ZooKeeperWatcher implements Watcher, Abortable {
       Abortable abortable) throws ZooKeeperConnectionException, IOException {
     this(conf, descriptor, abortable, false);
   }
-  /**
+  /***实例化一个zookeeper connection和watcher
    * Instantiate a ZooKeeper connection and watcher.
    * @param descriptor Descriptive string that is added to zookeeper sessionid
    * and used as identifier for this instance.

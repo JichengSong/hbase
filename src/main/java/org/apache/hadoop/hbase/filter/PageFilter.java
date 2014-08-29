@@ -28,7 +28,7 @@ import java.util.List;
 import java.util.ArrayList;
 
 import com.google.common.base.Preconditions;
-/**
+/**PageFilter将扫描的结果行数限制在pagesize内.(如果filter-passed rows > size,结束scan)
  * Implementation of Filter interface that limits results to a specific page
  * size. It terminates scanning once the number of filter-passed rows is >
  * the given page size.

@@ -108,7 +108,7 @@ public class ZKUtil {
   throws IOException {
     return connect(conf, ensemble, watcher, "");
   }
-
+  /***/
   public static RecoverableZooKeeper connect(Configuration conf, String ensemble,
       Watcher watcher, final String descriptor)
   throws IOException {

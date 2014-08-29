@@ -28,9 +28,9 @@ import java.util.Map;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.util.Bytes;
 
-/**
+/**在一行上进行追加操作.
  * Performs Append operations on a single row.
- * <p>
+ * <p>注意，这个操作对于reders并不是原子的. get和scan操作可能看到该操作部分完成的情况.
  * Note that this operation does not appear atomic to readers. Appends are done
  * under a single row lock, so write operations to a row are synchronized, but
  * readers do not take row locks so get and scan operations can see this
@@ -149,7 +149,7 @@ public class Append extends Mutation {
     writeAttributes(out);
   }
 
-  /**
+  /**将给定的kv添加到该append操作.
    * Add the specified {@link KeyValue} to this operation.
    * @param kv whose value should be to appended to the specified column
    * @return <tt?this</tt>

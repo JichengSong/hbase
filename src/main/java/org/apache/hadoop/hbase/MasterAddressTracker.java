@@ -37,7 +37,7 @@ import org.apache.hadoop.hbase.zookeeper.ZooKeeperWatcher;
  * You can get the current master via {@link #getMasterAddress()}
  */
 public class MasterAddressTracker extends ZooKeeperNodeTracker {
-  /**
+  /**根据给定的zookeeper引用,构造一个master address listener
    * Construct a master address listener with the specified
    * <code>zookeeper</code> reference.
    * <p>

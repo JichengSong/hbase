@@ -33,7 +33,7 @@ import org.apache.hadoop.hbase.regionserver.DeleteTracker.DeleteResult;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.EnvironmentEdgeManager;
 
-/**
+/**为scan定制的查询匹配器(query matcher).
  * A query matcher that is specifically designed for the scan case.
  */
 public class ScanQueryMatcher {

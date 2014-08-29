@@ -145,20 +145,20 @@ public class MetaScanner {
         byte[] searchRow =
           HRegionInfo.createRegionName(tableName, row, HConstants.NINES,
             false);
-        Result startRowResult = metaTable.getRowOrBefore(searchRow,
+        Result startRowResult = metaTable.getRowOrBefore(searchRow,//向region server发起RPC请求
             HConstants.CATALOG_FAMILY);
         if (startRowResult == null) {
           throw new TableNotFoundException("Cannot find row in .META. for table: "
               + Bytes.toString(tableName) + ", row=" + Bytes.toStringBinary(searchRow));
-        }
+        }//value存放.META.表info字段的值
         byte[] value = startRowResult.getValue(HConstants.CATALOG_FAMILY,
             HConstants.REGIONINFO_QUALIFIER);
         if (value == null || value.length == 0) {
           throw new IOException("HRegionInfo was null or empty in Meta for " +
             Bytes.toString(tableName) + ", row=" + Bytes.toStringBinary(searchRow));
-        }
+        }//根据value内容,获取regionInfo (也即从.META.表info字段的value中解析出regionInfo)
         HRegionInfo regionInfo = Writables.getHRegionInfo(value);
-
+        //根据startKey生成startRow
         byte[] rowBefore = regionInfo.getStartKey();
         startRow = HRegionInfo.createRegionName(tableName, rowBefore,
             HConstants.ZEROES, false);

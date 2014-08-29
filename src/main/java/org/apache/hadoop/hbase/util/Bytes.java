@@ -1079,7 +1079,7 @@ public class Bytes {
           throw new AssertionError();
         }
       }
-
+      //排序方式是否"从小到大“
       static final boolean littleEndian =
         ByteOrder.nativeOrder().equals(ByteOrder.LITTLE_ENDIAN);
 
@@ -1091,7 +1091,7 @@ public class Bytes {
         return (x1 + Long.MIN_VALUE) < (x2 + Long.MIN_VALUE);
       }
 
-      /**
+      /**对两个数组按字典排序
        * Lexicographically compare two arrays.
        *
        * @param buffer1 left operand
@@ -1116,39 +1116,39 @@ public class Bytes {
         int offset1Adj = offset1 + BYTE_ARRAY_BASE_OFFSET;
         int offset2Adj = offset2 + BYTE_ARRAY_BASE_OFFSET;
 
-        /*
+        /*一次对8个字节进行compare. 基准测试程序表明一次比较8个字节比一次比较4个性能要好.
          * Compare 8 bytes at a time. Benchmarking shows comparing 8 bytes at a
          * time is no slower than comparing 4 bytes at a time even on 32-bit.
          * On the other hand, it is substantially faster on 64-bit.
          */
         for (int i = 0; i < minWords * SIZEOF_LONG; i += SIZEOF_LONG) {
-          long lw = theUnsafe.getLong(buffer1, offset1Adj + (long) i);
-          long rw = theUnsafe.getLong(buffer2, offset2Adj + (long) i);
-          long diff = lw ^ rw;
-
+          long lw = theUnsafe.getLong(buffer1, offset1Adj + (long) i);//关键点就在这儿：getLong将原来的8个字节进行倒序，
+          long rw = theUnsafe.getLong(buffer2, offset2Adj + (long) i);//然后组成一个long。 比如{1,0,0,0,0,0,0,0}倒序为{0,0,0,0,0,0,0,1}
+          long diff = lw ^ rw; //对lw和rw进行异或操作.					  //转换成long后. 后续的操作就好理解了.
+        //1.如果异或的结果不为0,表明lw和rw不等.
           if (diff != 0) {
-            if (!littleEndian) {
-              return lessThanUnsigned(lw, rw) ? -1 : 1;
+            if (!littleEndian) {//(1.1) 如果排序方式不是"littleEndian"(从小到大).(实际上littleEndian为true)
+              return lessThanUnsigned(lw, rw) ? -1 : 1;//将lw,rw按照无符号数进行比较
             }
-
+            //(1.2) 
             // Use binary search
             int n = 0;
             int y;
-            int x = (int) diff;
-            if (x == 0) {
+            int x = (int) diff;//低4字节的比较结果
+            if (x == 0) {//如果低4字节的比较结果为0，则将高4字节的比较结果赋给x.
               x = (int) (diff >>> 32);
               n = 32;
             }
-
+            //将y=x<<16
             y = x << 16;
-            if (y == 0) {
+            if (y == 0) {//如果y为0，表示x在int中的前两个字节不为0，后两个字节为0
               n += 16;
-            } else {
+            } else {//如果y不为0,表示在int中的后两个字节不为0，x=y,也既将2个字节的比较结果赋值给x
               x = y;
             }
-
+            //将y<<8
             y = x << 8;
-            if (y == 0) {
+            if (y == 0) {//如果y为0,表示低4
               n += 8;
             }
             return (int) (((lw >>> n) & 0xFFL) - ((rw >>> n) & 0xFFL));
