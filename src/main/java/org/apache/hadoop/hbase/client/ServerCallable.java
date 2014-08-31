@@ -111,7 +111,7 @@ public abstract class ServerCallable<T> implements Callable<T> {
   public byte [] getRow() {
     return row;
   }
-  /**如果remaining大于MIN_RPC_TIMEOUT,则将RpcTimeout设置为remaining,否则设置为MIN_RPC_TIMEOUT*/
+  /**如果remaining大于MIN_RPC_TIMEOUT,则将RpcTimeout设置为remaining,否则设置为MIN_RPC_TIMEOUT(保证时间够一次RPC调用)*/
   public void beforeCall() {
     this.startTime = EnvironmentEdgeManager.currentTimeMillis();
     int remaining = (int)(callTimeout - (this.startTime - this.globalStartTime));

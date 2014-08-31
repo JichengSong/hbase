@@ -538,8 +538,8 @@ public class HConnectionManager {
         '}';
     }
   }
-
-  /* Encapsulates connection to zookeeper and regionservers.*/
+  /**封装与zookeeper和regionservers的连接.
+   Encapsulates connection to zookeeper and regionservers.*/
   static class HConnectionImplementation implements HConnection, Closeable {
     static final Log LOG = LogFactory.getLog(HConnectionImplementation.class);
     private final Class<? extends HRegionInterface> serverInterfaceClass;
@@ -1011,9 +1011,9 @@ public class HConnectionManager {
     private void prefetchRegionCache(final byte[] tableName,
         final byte[] row) {
       // Implement a new visitor for MetaScanner, and use it to walk through
-      // the .META.
+      // the .META. //为MetaScanner实现一个vistor
       MetaScannerVisitor visitor = new MetaScannerVisitorBase() {
-        public boolean processRow(Result result) throws IOException {
+        public boolean processRow(Result result) throws IOException {//实现processRow方法
           try {
             byte[] value = result.getValue(HConstants.CATALOG_FAMILY,
                 HConstants.REGIONINFO_QUALIFIER);
@@ -1103,34 +1103,34 @@ public class HConnectionManager {
           HRegionInterface server =
             getHRegionConnection(metaLocation.getHostname(), metaLocation.getPort());
           Result regionInfoRow = null;
-          if (useCache) {//(2.3)使用cache,命中则在2.3 return 结果.
+          if (useCache) {//(2.3)若使用cache,命中则在2.3 return 结果.
             if (Bytes.equals(parentTable, HConstants.META_TABLE_NAME)
-                && (getRegionCachePrefetch(tableName))) {//(1).
+                && (getRegionCachePrefetch(tableName))) {//(2.3.1).如果parentTable是-META-,且开启了region cache prefetch
               // This block guards against two threads trying to load the meta
               // region at the same time. The first will load the meta region and
               // the second will use the value that the first one found.
-              synchronized (regionLockObject) {
+              synchronized (regionLockObject) {//加锁，避免两个线程同时夹在meta region. 第一个线程将加载meta region,第二个线程用第一个的缓存.
                 // Check the cache again for a hit in case some other thread made the
                 // same query while we were waiting on the lock.
                 location = getCachedLocation(tableName, row);
-                if (location != null) {
+                if (location != null) {//缓存命中,直接返回.
                   return location;
-                }
+                }					   //缓存未命中，调用MetaScaner,Scan META表(预取10条数据)
                 // If the parent table is META, we may want to pre-fetch some
                 // region info into the global region cache for this table.
                 prefetchRegionCache(tableName, row);
               }
-            }
+            }//从刚预取的缓存中查找location
             location = getCachedLocation(tableName, row);
-            if (location != null) {
+            if (location != null) {//缓存命中,则返回location
               return location;
             }
-          } else {
+          } else {//未开启缓存功能,清空cache
             // If we are not supposed to be using the cache, delete any existing cached location
             // so it won't interfere.
             deleteCachedLocation(tableName, row);
           }//
-          //(2.4)cache未命中,则向(meta或root所在的)server发起rpc请求,查找指定region的RegionLocation
+          //(2.4)cache未命中或未开启缓存,则向(meta或root所在的)server发起rpc请求,查找指定region的RegionLocation
           // Query the root or meta region for the location of the meta region
           regionInfoRow = server.getClosestRowBefore(
           metaLocation.getRegionInfo().getRegionName(), metaKey,

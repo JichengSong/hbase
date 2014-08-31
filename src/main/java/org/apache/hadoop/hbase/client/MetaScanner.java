@@ -39,14 +39,14 @@ import org.apache.hadoop.hbase.errorhandling.TimeoutException;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.Writables;
 
-/**
+/**这是一个带有对.META.表的扫描逻辑的扫描类.
  * Scanner class that contains the <code>.META.</code> table scanning logic
  * and uses a Retryable scanner. Provided visitors will be called
  * for each row.
  *
  * Although public visibility, this is not a public-facing API and may evolve in
  * minor releases.
- *
+ *注意:在并发region splits期间,该scanner扫描META可能会出现漏洞.在split事务期间,可能parent被标记为下线了,而daughters还没被添加到META
  * <p> Note that during concurrent region splits, the scanner might not see
  * META changes across rows (for parent and daughter entries) consistently.
  * see HBASE-5986, and {@link BlockingMetaScannerVisitor} for details. </p>
@@ -128,14 +128,14 @@ public class MetaScanner {
       int rowLimit, final byte [] metaTableName)
   throws IOException {
     HTable metaTable = null;
-    try {
+    try {//1.实例化metaTable
       if (connection == null) {
         metaTable = new HTable(configuration, HConstants.META_TABLE_NAME, null);
       } else {
         metaTable = new HTable(HConstants.META_TABLE_NAME, connection, null);
-      }
+      }	//2.预取条数
       int rowUpperLimit = rowLimit > 0 ? rowLimit: Integer.MAX_VALUE;
-
+      	//3.1如果row非空,我们将以row's region的startkey作为meta scan的startRow.
       // if row is not null, we want to use the startKey of the row's region as
       // the startRow for the meta scan.
       byte[] startRow;
@@ -162,21 +162,21 @@ public class MetaScanner {
         byte[] rowBefore = regionInfo.getStartKey();
         startRow = HRegionInfo.createRegionName(tableName, rowBefore,
             HConstants.ZEROES, false);
-      } else if (tableName == null || tableName.length == 0) {
+      } else if (tableName == null || tableName.length == 0) {//3.2如果table为空,则Full Meta scan。
         // Full META scan
         startRow = HConstants.EMPTY_START_ROW;
-      } else {
-        // Scan META for an entire table
+      } else {												  //3.3row为空,table非空,则从meta表里查找able的全部region
+        // Scan META for an entire table					  //   这里以该table的最小regionName作为meta scan的startRow
         startRow = HRegionInfo.createRegionName(
             tableName, HConstants.EMPTY_START_ROW, HConstants.ZEROES, false);
       }
-
+      //4.扫描meta表的每个region .(通常.META.表只有一个region)//
       // Scan over each meta region
       ScannerCallable callable;
       int rows = Math.min(rowLimit, configuration.getInt(
           HConstants.HBASE_META_SCANNER_CACHING,
           HConstants.DEFAULT_HBASE_META_SCANNER_CACHING));
-      do {
+      do {//while循环,扫描-META-表
         final Scan scan = new Scan(startRow).addFamily(HConstants.CATALOG_FAMILY);
         if (LOG.isDebugEnabled()) {
           LOG.debug("Scanning " + Bytes.toString(metaTableName) +
@@ -214,7 +214,7 @@ public class MetaScanner {
         } finally {
           // Close scanner
           callable.setClose();
-          callable.withRetries();
+          callable.withRetries();//这儿为什么又调用了一次callable.withRetires()呢？
         }
       } while (Bytes.compareTo(startRow, HConstants.LAST_ROW) != 0);
     } finally {
