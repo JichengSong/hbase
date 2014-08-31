@@ -167,16 +167,16 @@ Server {
   private final Configuration conf;
   // server for the web ui
   private InfoServer infoServer;
-
+  /******************************ZooKeeperListener*********************************************/
   // Our zk client.
   private ZooKeeperWatcher zooKeeper;
-  // Manager and zk listener for master election
+  // Manager and zk listener for master election//继承ZooKeeperListener
   private ActiveMasterManager activeMasterManager;
-  // Region server tracker
+  // Region server tracker			// 继承ZooKeeperListener
   private RegionServerTracker regionServerTracker;
-  // Draining region server tracker
+  // Draining region server tracker//继承ZooKeeperListener
   private DrainingServerTracker drainingServerTracker;
-
+  /******************************RpcServer****************************************************/
   // RPC server for the HMaster
   private final RpcServer rpcServer;
 
@@ -187,13 +187,13 @@ Server {
 
   // Metrics for the HMaster
   private final MasterMetrics metrics;
-  // file system manager for the master FS operations
+  // file system manager for the master FS operations//抽象了HMaster与底层文件系统交互所需的一系列操作
   private MasterFileSystem fileSystemManager;
 
-  // server manager to deal with region server info
+  /** server manager to deal with region server info*/
   private ServerManager serverManager;
-
-  // manager of assignment nodes in zookeeper
+  /******************************ServerManager****************************************************/
+  /** manager of assignment nodes in zookeeper*/
   AssignmentManager assignmentManager;
   // manager of catalog regions
   private CatalogTracker catalogTracker;
@@ -221,22 +221,22 @@ Server {
   private volatile boolean serverShutdownHandlerEnabled = false;
   // flag to indicate that we should be handling meta hlogs differently for splitting
   private volatile boolean shouldSplitMetaSeparately;
-
+  /******************************ExecutorService****************************************************/
   // Instance of the hbase executor service.
   ExecutorService executorService;
-
+  /******************************LoadBalancer, BalancerChore****************************************/
   private LoadBalancer balancer;
   private Thread balancerChore;
   // If 'true', the balancer is 'on'.  If 'false', the balancer will not run.
   private volatile boolean balanceSwitch = true;
-
-  private CatalogJanitor catalogJanitorChore;
+  /******************************垃圾回收:CatalogJanitor,LogCleaner,HFileCleaner*********************/
+  private CatalogJanitor catalogJanitorChore;  //定时扫描-META-，对无用的region进行垃圾回收
   private LogCleaner logCleaner;
   private HFileCleaner hfileCleaner;
-
-  private MasterCoprocessorHost cpHost;
-  private final ServerName serverName;
-
+  
+  private MasterCoprocessorHost cpHost;		  //Master根据该类和加载的coprocessor交互
+  private final ServerName serverName;		  //该HMaster所在服务器
+  /******************************TableDescriptors***************************************************/
   private TableDescriptors tableDescriptors;
 
   // Time stamps for when a hmaster was started and when it became active
@@ -244,13 +244,13 @@ Server {
   private long masterActiveTime;
 
   // monitor for snapshot of hbase tables
-  private SnapshotManager snapshotManager;
+  private SnapshotManager snapshotManager;  //HBase tables的镜像管理者
 
   /**
    * MX Bean for MasterInfo
    */
   private ObjectName mxBean = null;
-
+  /******************************protocolHandlers 管理coprocessor protocol的注册*********************/
   // Registered master protocol handlers
   private ClassToInstanceMap<CoprocessorProtocol>
       protocolHandlers = MutableClassToInstanceMap.create();
@@ -259,7 +259,7 @@ Server {
       protocolHandlerNames = Maps.newHashMap();
 
   /** The health check chore. */
-  private HealthCheckChore healthCheckChore;
+  private HealthCheckChore healthCheckChore;//健康检查
 
   /** flag when true, Master waits for log splitting complete before start up */
   private boolean waitingOnLogSplitting = false;
@@ -1158,7 +1158,7 @@ Server {
     long cutoffTime = System.currentTimeMillis() + maximumBalanceTime;
     boolean balancerRan;
     synchronized (this.balancer) {
-      // Only allow one balance run at at time.
+      // 同一时刻只允许有一个balance运行 Only allow one balance run at at time.
       if (this.assignmentManager.isRegionsInTransition()) {
         LOG.debug("Not running balancer because " +
           this.assignmentManager.getRegionsInTransition().size() +
@@ -1184,7 +1184,7 @@ Server {
           return false;
         }
       }
-
+      
       Map<String, Map<ServerName, List<HRegionInfo>>> assignmentsByTable =
         this.assignmentManager.getAssignmentsByTable();
 
