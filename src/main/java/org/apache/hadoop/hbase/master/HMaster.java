@@ -284,12 +284,12 @@ Server {
    */
   public HMaster(final Configuration conf)
   throws IOException, KeeperException, InterruptedException {
-    this.conf = new Configuration(conf);
-    // Disable the block cache on the master
+    this.conf = new Configuration(conf);//1.配置设置
+    // (1.1) HMaster端需要禁用block cache.//Disable the block cache on the master
     this.conf.setFloat(HConstants.HFILE_BLOCK_CACHE_SIZE_KEY, 0.0f);
-    // Set how many times to retry talking to another server over HConnection.
+    // (1.2) 设置尝试次数//Set how many times to retry talking to another server over HConnection.
     HConnectionManager.setServerSideHConnectionRetries(this.conf, LOG);
-    // Server to handle client requests.
+    //2.初始化hostname参数 //Server to handle client requests.
     String hostname = Strings.domainNamePointerToHostName(DNS.getDefaultHost(
       conf.get("hbase.master.dns.interface", "default"),
       conf.get("hbase.master.dns.nameserver", "default")));
@@ -306,7 +306,7 @@ Server {
       if (initialIsa.getAddress() == null) {
         throw new IllegalArgumentException("Failed resolve of bind address " + initialIsa);
       }
-    }
+    }//3.初始化rpcServer ,将HMaster自己封装成RPC Server.
     int numHandlers = conf.getInt("hbase.master.handler.count",
       conf.getInt("hbase.regionserver.handler.count", 25));
     this.rpcServer = HBaseRPC.getServer(this,
@@ -324,19 +324,19 @@ Server {
       this.isa.getPort(), System.currentTimeMillis());
     this.rsFatals = new MemoryBoundedLogMessageBuffer(
         conf.getLong("hbase.master.buffer.for.rs.fatals", 1*1024*1024));
-
-    // login the zookeeper client principal (if using security)
+    //4.zookeeper相关
+    // zookeeper安全策略//login the zookeeper client principal (if using security)
     ZKUtil.loginClient(this.conf, "hbase.zookeeper.client.keytab.file",
       "hbase.zookeeper.client.kerberos.principal", this.isa.getHostName());
-
+    //安全相关
     // initialize server principal (if using secure Hadoop)
     UserProvider provider = UserProvider.instantiate(conf);
     provider.login("hbase.master.keytab.file",
       "hbase.master.kerberos.principal", this.isa.getHostName());
-
+    
     // set the thread name now we have an address
     setName(MASTER + "-" + this.serverName.toString());
-
+    //5. 更改master的配置，以添加副本相关的特性.
     Replication.decorateMasterConfiguration(this.conf);
 
     // Hack! Maps DFSClient => Master for logs.  HDFS made this
@@ -344,11 +344,11 @@ Server {
     if (this.conf.get("mapred.task.id") == null) {
       this.conf.set("mapred.task.id", "hb_m_" + this.serverName.toString());
     }
-
+    //6.启动zk client和rpcserver 
     this.zooKeeper = new ZooKeeperWatcher(conf, MASTER + ":" + isa.getPort(), this, true);
     this.rpcServer.startThreads();
     this.metrics = new MasterMetrics(getServerName().toString());
-
+    //7.启动健康检查线程
     // Health checker thread.
     int sleepTime = this.conf.getInt(HConstants.HEALTH_CHORE_WAKE_FREQ,
       HConstants.DEFAULT_THREAD_WAKE_FREQUENCY);
