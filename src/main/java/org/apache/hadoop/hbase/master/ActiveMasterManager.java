@@ -142,15 +142,15 @@ public class ActiveMasterManager extends ZooKeeperListener {
       // Try to become the active master, watch if there is another master.
       // Write out our ServerName as versioned bytes.
       try {
-        String backupZNode = ZKUtil.joinZNode(
+        String backupZNode = ZKUtil.joinZNode(				//1.获取backupZNode,默认/hbase/backup-master/${SERVER-NAME}
           this.watcher.backupMasterAddressesZNode, this.sn.toString());
-        if (ZKUtil.createEphemeralNodeAndWatch(this.watcher,
-          this.watcher.masterAddressZNode, this.sn.getVersionedBytes())) {
+        if (ZKUtil.createEphemeralNodeAndWatch(this.watcher,//2.尝试创建master ZNode,默认/hbase/master.
+          this.watcher.masterAddressZNode, this.sn.getVersionedBytes())) {//创建成功，表示当前HMaster成为active master
           // If we were a backup master before, delete our ZNode from the backup
           // master directory since we are the active now
           LOG.info("Deleting ZNode for " + backupZNode +
             " from backup master directory");
-          ZKUtil.deleteNodeFailSilent(this.watcher, backupZNode);
+          ZKUtil.deleteNodeFailSilent(this.watcher, backupZNode);//2.1成为active master后要删除该hmaster在/hbase/backup-master/下建的znode
 
           // We are the master, return
           startupStatus.setStatus("Successfully registered as active master.");
@@ -158,12 +158,12 @@ public class ActiveMasterManager extends ZooKeeperListener {
           LOG.info("Master=" + this.sn);
           return true;
         }
-
+        // 3.当前hmaster无法创建/hbase/master(因为已经有别的active master创建了). 说明当前集群有active master,将标志值true
         // There is another active master running elsewhere or this is a restart
         // and the master ephemeral node has not expired yet.
         this.clusterHasActiveMaster.set(true);
 
-        /*
+        /*4.因为当前hmaster没有成为active master, 则在/hbase/backup-master下创建znode，表示自己是backup-master
          * Add a ZNode for ourselves in the backup master directory since we are
          * not the active master.
          *
@@ -175,21 +175,21 @@ public class ActiveMasterManager extends ZooKeeperListener {
           " in backup master directory");
         ZKUtil.createEphemeralNodeAndWatch(this.watcher, backupZNode,
           this.sn.getVersionedBytes());
-
+        //5.获取当前active master的znode数据.
         String msg;
         byte [] bytes =
           ZKUtil.getDataAndWatch(this.watcher, this.watcher.masterAddressZNode);
-        if (bytes == null) {
+        if (bytes == null) {//(4.1)active master的znode数据为空,表示active master挂掉了
           msg = ("A master was detected, but went down before its address " +
             "could be read.  Attempting to become the next active master");
-        } else {
+        } else {		   // (4.2)active master的znode正常
           ServerName currentMaster = ServerName.parseVersionedServerName(bytes);
-          if (ServerName.isSameHostnameAndPort(currentMaster, this.sn)) {
-            msg = ("Current master has this master's address, " +
+          if (ServerName.isSameHostnameAndPort(currentMaster, this.sn)) {//(4.2.1) active master的地址和当前hmaster的相同
+            msg = ("Current master has this master's address, " +		 //      说明master可能刚进行了重启
               currentMaster + "; master was restarted? Deleting node.");
-            // Hurry along the expiration of the znode.
-            ZKUtil.deleteNode(this.watcher, this.watcher.masterAddressZNode);
-          } else {
+            // Hurry along the expiration of the znode.					     //将原来active master的znode删掉.
+            ZKUtil.deleteNode(this.watcher, this.watcher.masterAddressZNode);//(保证所有的backup-master继续竞选hmaster)
+          } else {														//（4.2.2） active master 正常
             msg = "Another master is the active master, " + currentMaster +
               "; waiting to become the next active master";
           }
@@ -199,7 +199,7 @@ public class ActiveMasterManager extends ZooKeeperListener {
       } catch (KeeperException ke) {
         master.abort("Received an unexpected KeeperException, aborting", ke);
         return false;
-      }
+      }//6.
       synchronized (this.clusterHasActiveMaster) {
         while (this.clusterHasActiveMaster.get() && !this.master.isStopped()) {
           try {
@@ -220,7 +220,7 @@ public class ActiveMasterManager extends ZooKeeperListener {
     }
   }
 
-  /**
+  /**判断当前集群是否有active master
    * @return True if cluster has an active master.
    */
   public boolean isActiveMaster() {
