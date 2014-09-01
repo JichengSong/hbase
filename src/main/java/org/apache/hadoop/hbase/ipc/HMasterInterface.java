@@ -46,7 +46,7 @@ import org.apache.hadoop.hbase.util.Pair;
     serverPrincipal = "hbase.master.kerberos.principal")
 @TokenInfo("HBASE_AUTH_TOKEN")
 public interface HMasterInterface extends VersionedProtocol {
-  /**
+  /**Client和HMaster建立rpc连接时，首先判断VERSION是否一致,若不一致,则抛出异常.
    * This Interfaces' version. Version changes when the Interface changes.
    */
   // All HBase Interfaces used derive from HBaseRPCProtocolVersion.  It

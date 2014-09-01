@@ -360,7 +360,7 @@ Server {
     waitingOnLogSplitting = this.conf.getBoolean("hbase.master.wait.for.log.splitting", false);
   }
 
-  /**
+  /**如果我们被设计为master的备份(backup master),停止启动。也就是我们想在开始之前让别人成为master
    * Stall startup if we are designated a backup master; i.e. we want someone
    * else to become the master before proceeding.
    * @param c
@@ -379,7 +379,7 @@ Server {
       "Stalling until master znode is written.");
     // This will only be a minute or so while the cluster starts up,
     // so don't worry about setting watches on the parent znode
-    while (!amm.isActiveMaster()) {
+    while (!amm.isActiveMaster()) {//如果还没有active master,则等待active master起来后，再激活backup master
       LOG.debug("Waiting for master address ZNode to be written " +
         "(Also watching cluster state node)");
       Thread.sleep(c.getInt("zookeeper.session.timeout", 180 * 1000));
@@ -387,7 +387,7 @@ Server {
 
   }
 
-  /**
+  /**这个是HMaster的主要处理循环.
    * Main processing loop for the HMaster.
    * <ol>
    * <li>Block until becoming active master
@@ -468,7 +468,7 @@ Server {
     LOG.info("HMaster main thread exiting");
   }
 
-  /**
+  /**尝试成为active master
    * Try becoming active master.
    * @param startupStatus
    * @return True if we could successfully become the active master.
@@ -649,7 +649,7 @@ Server {
     if (!assignMeta(status, ((masterRecovery) ? null : preMetaServer), preRootServer)) return;
 
     enableServerShutdownHandler();
-
+    
     // handle other dead servers in SSH
     status.setStatus("Submit log splitting work of non-meta region servers");
     for (ServerName curServer : failedServers) {
@@ -673,7 +673,7 @@ Server {
     // Fixing up missing daughters if any
     status.setStatus("Fixing up missing daughters");
     fixupDaughters(status);
-    
+    //15.如果不是master recovery，开启balancer 和catalogJanitorChore线程
     if (!masterRecovery) {
       // Start balancer and meta catalog janitor after meta and regions have
       // been assigned.
@@ -683,7 +683,7 @@ Server {
       startCatalogJanitorChore();
       registerMBean();
     }
-
+    //16.标记"初始化成功"
     status.markComplete("Initialization successful");
     LOG.info("Master has completed initialization");
     initialized = true;
@@ -1318,7 +1318,7 @@ Server {
       throw ure;
     }
   }
-
+  /**异步创建table*/
   public void createTable(HTableDescriptor hTableDescriptor,
     byte [][] splitKeys)
   throws IOException {
