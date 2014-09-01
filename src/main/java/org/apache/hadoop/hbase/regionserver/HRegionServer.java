@@ -407,7 +407,7 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
     // Set how many times to retry talking to another server over HConnection.
     HConnectionManager.setServerSideHConnectionRetries(this.conf, LOG);
     this.isOnline = false;
-    checkCodecs(this.conf);
+    checkCodecs(this.conf);//检查配置的codec是否正常(lib是否存在)
 
     // do we use checksum verfication in the hbase? If hbase checksum verification
     // is enabled, then we automatically switch off hdfs checksum verification.
@@ -415,22 +415,22 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
       HConstants.HBASE_CHECKSUM_VERIFICATION, false);
 
     // Config'ed params
-    this.separateHLogForMeta = conf.getBoolean(HLog.SEPARATE_HLOG_FOR_META, false);
-    this.numRetries = conf.getInt("hbase.client.retries.number", 10);
-    this.threadWakeFrequency = conf.getInt(HConstants.THREAD_WAKE_FREQUENCY,
+    this.separateHLogForMeta = conf.getBoolean(HLog.SEPARATE_HLOG_FOR_META, false);//
+    this.numRetries = conf.getInt("hbase.client.retries.number", 10);//尝试次数 默认10
+    this.threadWakeFrequency = conf.getInt(HConstants.THREAD_WAKE_FREQUENCY,//线程wakeup的时间间隔
       10 * 1000);
-    this.msgInterval = conf.getInt("hbase.regionserver.msginterval", 3 * 1000);
+    this.msgInterval = conf.getInt("hbase.regionserver.msginterval", 3 * 1000);//msg间隔
 
-    this.sleeper = new Sleeper(this.msgInterval, this);
+    this.sleeper = new Sleeper(this.msgInterval, this);//初始化sleeper 
 
-    this.maxScannerResultSize = conf.getLong(
+    this.maxScannerResultSize = conf.getLong(		   //scanner.next()返回的最大字节数
       HConstants.HBASE_CLIENT_SCANNER_MAX_RESULT_SIZE_KEY,
       HConstants.DEFAULT_HBASE_CLIENT_SCANNER_MAX_RESULT_SIZE);
 
-    this.numRegionsToReport = conf.getInt(
+    this.numRegionsToReport = conf.getInt(			  //需要回报的负载较重的top N个region,n默认为10
       "hbase.regionserver.numregionstoreport", 10);
 
-    this.rpcTimeout = conf.getInt(
+    this.rpcTimeout = conf.getInt(					 //rpc超时时间，hbase.rpc.shortoperation.timeout，默认10000ms,(10s)
       HConstants.HBASE_RPC_SHORTOPERATION_TIMEOUT_KEY,
       HConstants.DEFAULT_HBASE_RPC_SHORTOPERATION_TIMEOUT);
 
@@ -438,20 +438,20 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
     this.stopped = false;
 
     // Server to handle client requests.
-    String hostname = conf.get("hbase.regionserver.ipc.address",
+    String hostname = conf.get("hbase.regionserver.ipc.address",//hostname
       Strings.domainNamePointerToHostName(DNS.getDefaultHost(
         conf.get("hbase.regionserver.dns.interface", "default"),
         conf.get("hbase.regionserver.dns.nameserver", "default"))));
-    int port = conf.getInt(HConstants.REGIONSERVER_PORT,
+    int port = conf.getInt(HConstants.REGIONSERVER_PORT,		//默认port为60020
       HConstants.DEFAULT_REGIONSERVER_PORT);
-    // Creation of a HSA will force a resolve.
+    // Creation of a HSA will force a resolve.					//封装成InetSocketAddress
     InetSocketAddress initialIsa = new InetSocketAddress(hostname, port);
     if (initialIsa.getAddress() == null) {
       throw new IllegalArgumentException("Failed resolve of " + initialIsa);
     }
-
+    
     this.rand = new Random(initialIsa.hashCode());
-    this.rpcServer = HBaseRPC.getServer(this,
+    this.rpcServer = HBaseRPC.getServer(this,					//初始化rpcServer (将自己封装成rpcServer)
       new Class<?>[]{HRegionInterface.class, HBaseRPCErrorHandler.class,
         OnlineRegions.class},
         initialIsa.getHostName(), // BindAddress is IP we got for this server.
@@ -459,33 +459,33 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
         conf.getInt("hbase.regionserver.handler.count", 10),
         conf.getInt("hbase.regionserver.metahandler.count", 10),
         conf.getBoolean("hbase.rpc.verbose", false),
-        conf, HConstants.QOS_THRESHOLD);
+        conf, HConstants.QOS_THRESHOLD);						//初始化server
     if (rpcServer instanceof HBaseServer) server = (HBaseServer) rpcServer;
     // Set our address.
-    this.isa = this.rpcServer.getListenerAddress();
+    this.isa = this.rpcServer.getListenerAddress();				//初始化isa InetSocketAddress
 
-    this.rpcServer.setErrorHandler(this);
-    this.rpcServer.setQosFunction(new QosFunction());
+    this.rpcServer.setErrorHandler(this);						//设置rpcServer的ErrorHandler
+    this.rpcServer.setQosFunction(new QosFunction());			//设置rpcServer的QosFunction
     this.startcode = System.currentTimeMillis();
 
     conf.set("hbase.regionserver.rpc.client.socket.bind.address", this.isa.getHostName());
 
-    // login the zookeeper client principal (if using security)
+    // login the zookeeper client principal (if using security)//zk 安全相关
     ZKUtil.loginClient(this.conf, "hbase.zookeeper.client.keytab.file",
       "hbase.zookeeper.client.kerberos.principal", this.isa.getHostName());
 
     // login the server principal (if using secure Hadoop)
-    UserProvider provider = UserProvider.instantiate(conf);
+    UserProvider provider = UserProvider.instantiate(conf);	  //hadoop安全相关
     provider.login("hbase.regionserver.keytab.file",
       "hbase.regionserver.kerberos.principal", this.isa.getHostName());
-    regionServerAccounting = new RegionServerAccounting();
+    regionServerAccounting = new RegionServerAccounting();	  //负责RegionServer实时信息的审计
     cacheConfig = new CacheConfig(conf);
-    uncaughtExceptionHandler = new UncaughtExceptionHandler() {
+    uncaughtExceptionHandler = new UncaughtExceptionHandler() {//
       public void uncaughtException(Thread t, Throwable e) {
         abort("Uncaught exception in service thread " + t.getName(), e);
       }
     };
-    this.rsInfo = RegionServerInfo.newBuilder();
+    this.rsInfo = RegionServerInfo.newBuilder();			//初始化rsInfo
     // Put up the webui.  Webui may come up on port other than configured if
     // that port is occupied. Adjust serverInfo if this is the case.
     this.rsInfo.setInfoPort(putUpWebUI());
