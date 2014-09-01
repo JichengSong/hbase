@@ -734,22 +734,22 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
     }
   }
 
-  /**
+  /**HRegionServer在closed之前会一直处于该循环
    * The HRegionServer sticks in this loop until closed.
    */
   @SuppressWarnings("deprecation")
   public void run() {
-    try {
+    try {//1.在注册master之前，做一些必要的初始化工作,包括zk,lease线程 等.
       // Do pre-registration initializations; zookeeper, lease threads, etc.
       preRegistrationInitialization();
     } catch (Throwable e) {
       abort("Fatal exception during initialization", e);
     }
-
+    	
     try {
       // Try and register with the Master; tell it we are here.  Break if
       // server is stopped or the clusterup flag is down or hdfs went wacky.
-      while (keepLooping()) {
+      while (keepLooping()) {//2.尝试向master注册
         MapWritable w = reportForDuty();
         if (w == null) {
           LOG.warn("reportForDuty failed; sleeping and then retrying.");
@@ -758,17 +758,17 @@ public class HRegionServer implements HRegionInterface, HBaseRPCErrorHandler,
           handleReportForDutyResponse(w);
           break;
         }
-      }
+      }//3.注册MBean
       registerMBean();
-
+      //4.启动snapshot handler.
       // start the snapshot handler, since the server is ready to run
       this.snapshotManager.start();
-
+      //5.进入run mode,主循环
       // We registered with the Master.  Go into run mode.
       long lastMsg = 0;
       long oldRequestCount = -1;
       // The main run loop.
-      while (!this.stopped && isHealthy()) {
+      while (!this.stopped && isHealthy()) {//这儿是主循环 (main loop)
         if (!isClusterUp()) {
           if (isOnlineRegionsEmpty()) {
             stop("Exiting; cluster shutdown set and not carrying any regions");
