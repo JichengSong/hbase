@@ -3021,7 +3021,7 @@ public class HRegion implements HeapSize { // , Writable{
     this.internalPut(p, HConstants.DEFAULT_CLUSTER_ID, true);
   }
 
-  /**
+  /**如果开启了WAL,则先写log，再写memstore. 写memstore是由applyFamilyMapToMemstore(familyMap, null)完成的.
    * Add updates first to the hlog (if writeToWal) and then add values to memstore.
    * Warning: Assumption is caller has lock on passed in row.
    * @param put The Put command
@@ -3082,7 +3082,7 @@ public class HRegion implements HeapSize { // , Writable{
     }
   }
 
-  /**
+  /**原子性地将family->edits更新到memstore.
    * Atomically apply the given map of family->edits to the memstore.
    * This handles the consistency control on its own, but the caller
    * should already have locked updatesLock.readLock(). This also does
@@ -3100,23 +3100,23 @@ public class HRegion implements HeapSize { // , Writable{
     boolean freemvcc = false;
 
     try {
-      if (localizedWriteEntry == null) {
+      if (localizedWriteEntry == null) {//如果localizedWriteEntry为null，则通过mvcc创建一个事物:mvvc.beginMemstoreInsert()
         localizedWriteEntry = mvcc.beginMemstoreInsert();
         freemvcc = true;
       }
-
+      //把kv添加到对应family所属的store里
       for (Map.Entry<byte[], List<KeyValue>> e : familyMap.entrySet()) {
         byte[] family = e.getKey();
         List<KeyValue> edits = e.getValue();
-
+        //把kv添加到store里
         Store store = getStore(family);
         for (KeyValue kv: edits) {
-          kv.setMemstoreTS(localizedWriteEntry.getWriteNumber());
+          kv.setMemstoreTS(localizedWriteEntry.getWriteNumber());//为kv设置事务号/MVVC版本号 (新版hbase里将setMemstoreTS方法改成了setMvccVersion
           size += store.add(kv);
         }
       }
     } finally {
-      if (freemvcc) {
+      if (freemvcc) {//结束事物:mvvc.completeMemstoreInsert
         mvcc.completeMemstoreInsert(localizedWriteEntry);
       }
     }

@@ -231,7 +231,7 @@ public class KeyValue implements Writable, HeapSize, Cloneable {
   public long getMemstoreTS() {
     return memstoreTS;
   }
-
+  /**更改MVVC版本号，这个方法名该为setMvvcVersion更直观*/
   public void setMemstoreTS(long memstoreTS) {
     this.memstoreTS = memstoreTS;
   }
