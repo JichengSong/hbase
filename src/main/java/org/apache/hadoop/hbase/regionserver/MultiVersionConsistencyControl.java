@@ -34,15 +34,15 @@ import org.apache.commons.logging.Log;
  * the new writes for readers to read (thus forming atomic transactions).
  */
 public class MultiVersionConsistencyControl {
-  private volatile long memstoreRead = 0;
-  private volatile long memstoreWrite = 0;
+  private volatile long memstoreRead = 0;//用于记录当前全局刻读的readPoint.
+  private volatile long memstoreWrite = 0;//用于记录当前全局最大的writePoint,根据它为下一个事物生成新的writePoint
 
   private final Object readWaiters = new Object();
 
   // This is the pending queue of writes.
   private final LinkedList<WriteEntry> writeQueue =
       new LinkedList<WriteEntry>();
-
+  //ThreadLocal类型的perThreadReadPoint 为了保证每个客户端请求能够记录自己发起请求时刻的readPoint。
   private static final ThreadLocal<Long> perThreadReadPoint =
       new ThreadLocal<Long>() {
        @Override
@@ -106,7 +106,7 @@ public class MultiVersionConsistencyControl {
   public static void resetThreadReadPoint() {
     perThreadReadPoint.set(0L);
   }
-
+  /**1.这个是MVCC类的核心方法:开始更新一个操作,将memstoreWrite加1，创建writeEntry并插入到writeQueue,并返回writeEntry对象*/
   public WriteEntry beginMemstoreInsert() {
     synchronized (writeQueue) {
       long nextWriteNumber = ++memstoreWrite;
@@ -115,12 +115,12 @@ public class MultiVersionConsistencyControl {
       return e;
     }
   }
-
+  /**2.这个是MVCC类的核心方法:完成当前更新操作，将writeEntry对象标记为可读*/
   public void completeMemstoreInsert(WriteEntry e) {
-    advanceMemstore(e);
-    waitForRead(e);
+    advanceMemstore(e);//从writeQueue里移除队首开始已经完成的连续的writeEntry元素，最后哦偶将memstoreRead更新为最新已完成的memstoreWrite
+    waitForRead(e);    //阻塞当前线程，直到memstoreRead等于当前writeEntry的memstoreWrite.至此表明当前WriteEntry之前的所有更新事物都已经完成.
   }
-
+  /**从头遍历writeQueue,移除从队首开始连续的已经完成的writeEntry,*/
   boolean advanceMemstore(WriteEntry e) {
     synchronized (writeQueue) {
       e.markCompleted();
@@ -130,18 +130,18 @@ public class MultiVersionConsistencyControl {
       while (!writeQueue.isEmpty()) {
         ranOnce=true;
         WriteEntry queueFirst = writeQueue.getFirst();
-
-        if (nextReadValue > 0) {
+        //
+        if (nextReadValue > 0) {//如果netReadValue+1和队首的writeNumber不一致，说明writeQueue有问题,抛出异常
           if (nextReadValue+1 != queueFirst.getWriteNumber()) {
             throw new RuntimeException("invariant in completeMemstoreInsert violated, prev: "
                 + nextReadValue + " next: " + queueFirst.getWriteNumber());
           }
         }
-
+        //如果queueFirst已经完成,将其从writeQueue移除,用queueFirst.writeNumber更新netReadValue
         if (queueFirst.isCompleted()) {
           nextReadValue = queueFirst.getWriteNumber();
           writeQueue.removeFirst();
-        } else {
+        } else {//否则，退出while循环.
           break;
         }
       }
@@ -149,7 +149,7 @@ public class MultiVersionConsistencyControl {
       if (!ranOnce) {
         throw new RuntimeException("never was a first");
       }
-
+      //nextReadValue>0说明有新完成的writeEntry,唤醒readWaiters
       if (nextReadValue > 0) {
         synchronized (readWaiters) {
           memstoreRead = nextReadValue;
@@ -164,8 +164,8 @@ public class MultiVersionConsistencyControl {
   }
 
   /**
-   * Wait for the global readPoint to advance upto
-   * the specified transaction number.
+   * Wait for the global readPoint to advance upto (advance upto：是大于或等于)
+   * the specified transaction number. 阻塞当前线程，直到memstoreRead等于当前writeEntry的memstoreWrite.至此表明当前WriteEntry之前的所有更新事物都已经完成.
    */
   public void waitForRead(WriteEntry e) {
     boolean interrupted = false;
